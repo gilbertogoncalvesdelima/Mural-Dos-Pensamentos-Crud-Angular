@@ -1,4 +1,4 @@
-# Mural-de-Lembretes-Crud-Angular
+# Mural-de-Lembretes-Crud-Angular 👋
 
 ## Sobre o projeto:
 
@@ -14,9 +14,8 @@ O projeto será desenvolvido em Angular CLI, com ela, será criado o projeto e t
 
 ## Figma, layout
 
-```js
-https://www.figma.com/proto/V7AgehdRqeyJaizG6O3Slo/Mural-de-Lembretes-Crud---Gilberto-Gon%C3%A7alves-de-Lima?type=design&node-id=148-27&t=7nfsjqeqlX4eOUXA-0&scaling=min-zoom&page-id=148%3A26&starting-point-node-id=148%3A67
-```
+[Figma](https://www.figma.com/proto/V7AgehdRqeyJaizG6O3Slo/Mural-de-Lembretes-Crud---Gilberto-Gon%C3%A7alves-de-Lima?type=design&node-id=148-27&t=7nfsjqeqlX4eOUXA-0&scaling=min-zoom&page-id=148%3A26&starting-point-node-id=148%3A67)
+
 ## Preparação do ambiente
 
 Ambiente de desenvolvimento
@@ -43,5 +42,5 @@ Lembrando que após criado o projeto, sua dependencias já foram instaladas, fic
 
 Com o projeto criado, vamos ver como é a cara inicial deste projeto? Para isso, vamos usar o comando cd muralDosPensamentosCrud para entrar no diretório do projeto e com a ajuda do CLI, usar o comando ng serve para executar o projeto.
 
-Tudo ocorreu bem? Sim? Abra seu navegador e acesse o http://localhost:4200.
+Tudo ocorreu bem? Sim? Abra seu navegador e acesse o [LocalHost](http://localhost:4200)
 
