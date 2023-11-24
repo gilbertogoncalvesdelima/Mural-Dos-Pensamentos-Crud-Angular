@@ -45,6 +45,7 @@ Com o projeto criado, vamos ver como é a cara inicial deste projeto? Para isso,
 Tudo ocorreu bem? Sim? Abra seu navegador e acesse o [LocalHost](http://localhost:4200)
 
 
-## Autor
+## Autor, Gilberto Gonçalves de Lima
 
-- [@gilbertogoncalvesdelima](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
+- [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
+- [@linkedin](https://www.linkedin.com/in/gilberto--gon%C3%A7alves/)
