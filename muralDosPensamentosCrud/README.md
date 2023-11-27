@@ -233,6 +233,18 @@ Descrição: Define se o componente é visível para outros módulos.
 
 Descrição: É possível definir várias aplicações no arquivo angular-cli.json contendo diferentes configurações. Este parâmetro especifica para qual dessas aplicações o componente deve ser criado. Por padrão, é a primeira aplicação informada no arquivo angular-cli.json.
 
+## VsCode, Editor de código
+
+Está sendo utilizado o editor de código VsCode, para codar o código.
+
+Extensões utilizadas, no VsCode:
+Existem várias opções de extensões do VS Code para nos auxiliar durante o desenvolvimento e quero compartilhar com você as que eu uso no meu dia a dia.
+A principal é a Angular Extension Pack, um pacote com algumas das extensões mais populares entre as pessoas desenvolvedoras.
+Você pode escolher algumas ou instalar o pacote, com todas elas.
+Para isso, com o VS Code aberto, clique no ícone de extensões, pesquise por Angular Extension Pack e depois clique em Install.
+
+Angular Extension Pack
+
 ## Autor, Gilberto Gonçalves de Lima
 
 - [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
