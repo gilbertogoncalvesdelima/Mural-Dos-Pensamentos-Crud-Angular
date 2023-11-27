@@ -244,6 +244,7 @@ Você pode escolher algumas ou instalar o pacote, com todas elas.
 Para isso, com o VS Code aberto, clique no ícone de extensões, pesquise por Angular Extension Pack e depois clique em Install.
 
 Angular Extension Pack
+Auto Import
 
 ## Autor, Gilberto Gonçalves de Lima
 

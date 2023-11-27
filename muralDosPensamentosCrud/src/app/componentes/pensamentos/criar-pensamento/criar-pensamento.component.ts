@@ -18,8 +18,6 @@ export class CriarPensamentoComponent implements OnInit {
 
   // NgOnInit, Para que serve: Ele é chamado uma única vez após a inicialização do componente.
   ngOnInit(): void {
-  //Assim que atuar o ngOnInit, a primeira vez, ira abrir o alerta, cancelar, teste
-  this.cancelar();
   }
   criarPensamento() {
     alert('Novo pensamento criado')
