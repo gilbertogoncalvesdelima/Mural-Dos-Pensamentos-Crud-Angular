@@ -34,7 +34,9 @@ export class ListarPensamentoComponent implements OnInit {
   constructor(private service: PensamentoService) { }
 // Assim que mneu componente renderizar a primeira vez, atualize o service.listar
   ngOnInit(): void {
-    this.service.listar()
+    // Com este subscribe, o observable irá entender que pe necessario emitir notificações, toda vez que tiver uma mudança
+    this.service.listar().subscribe((listaPensamentos) => {
+    this.listaPensamentos = listaPensamentos
+    })
   }
-
 }
