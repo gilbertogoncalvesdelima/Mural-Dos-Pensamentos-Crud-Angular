@@ -246,6 +246,10 @@ Para isso, com o VS Code aberto, clique no ícone de extensões, pesquise por An
 Angular Extension Pack
 Auto Import
 
+## Rotas do projeto
+
+O routerLink inicia a navegação do componente, que será renderizado na diretiva <router-outlet>.
+
 ## Autor, Gilberto Gonçalves de Lima
 
 - [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
