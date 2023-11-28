@@ -419,6 +419,26 @@ export class PensamentoService {
 }
 ```
 
+## Injeção de dependências
+
+Acessaremos o arquivo pensamento.service.ts e adicionaremos o HttpClient para conseguirmos inserir os métodos do "CRUD", pois a classe PensamentoService possui uma dependência em relação à essa classe.
+
+Nós queremos que essa classe "venha até nós" sem instanciá-la diretamente no PensamentoService, assim como ocorre no aplicativo de entrega de refeições. Para isso, criaremos dentro do constructor um parâmetro de nome http com o modificador de acesso private, e com o tipo de dependência HttpClient. O private permite que o atributo seja declarado automaticamente como atributo da classe.
+
+```js
+export class PensamentoService {
+    constructor(http: HttpClient) { }
+}
+```
+Tenha certeza de que o HttpClient foi importado conferindo se o código abaixo foi inserido automaticamente pela aplicação. Em caso negativo, adicione essa importação manualmente.
+
+```js
+import { HttpClient } from '@angular/common/http';
+```
+
+Com estes passos concluídos, temos acesso a todos os métodos da classe HttpClient. De acordo com a documentação do Angular, a injeção de dependências é um padrão de projeto no qual uma classe solicita dependências externas ao invés de criá-las
+
+
 ## Autor, Gilberto Gonçalves de Lima
 
 - [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
