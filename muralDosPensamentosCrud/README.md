@@ -662,6 +662,8 @@ Voltando ao arquivo criar-pensamento.component.ts, vamos inserir a mesma funçã
 
   Após esse procedimento, se criarmos um pensamento de teste e pressionarmos "Salvar" ou "Cancelar", ocorrerá o redirecionamento para a página do mural.
 
+
+
 ## Autor, Gilberto Gonçalves de Lima
 
 - [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)

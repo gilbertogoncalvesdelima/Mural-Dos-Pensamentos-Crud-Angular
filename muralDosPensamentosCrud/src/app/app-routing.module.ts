@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CriarPensamentoComponent } from './componentes/pensamentos/criar-pensamento/criar-pensamento.component';
 import { ListarPensamentoComponent } from './componentes/pensamentos/listar-pensamento/listar-pensamento.component';
 import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pensamento/excluir-pensamento.component';
+import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 // Rotas da aplicação
 const routes: Routes = [
@@ -32,7 +33,12 @@ const routes: Routes = [
     // Qual componente, aparecer, depois de estar na rota
     component: ExcluirPensamentoComponent
   },
-
+  {
+    // 3 Rota criada
+    path: 'pensamentos/editarPensamento/:id',
+    // Qual componente, aparecer, depois de estar na rota
+    component: EditarPensamentoComponent
+  }
 
 ];
 
