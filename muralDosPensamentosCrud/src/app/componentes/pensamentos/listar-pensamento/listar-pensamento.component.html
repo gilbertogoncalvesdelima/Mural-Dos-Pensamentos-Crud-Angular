@@ -4,7 +4,7 @@
       <!-- Router link, fazer direcionamento para uma rota especifica -->
       <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
   </header>
-  <div class="mural">
+  <div class="mural" *ngIf="listaPensamentos.length > 0, else semPensamentos">
     <!-- let Pensamento, variavel local, representando cada um dos elementos da lista -->
     <div *ngFor="let pensamento of listaPensamentos">
       <!--property binding, [pensamento], que declaramos no @input, no arquivo pensamento.component.ts, -->
@@ -13,3 +13,9 @@
     </div>
   </div>
 </section>
+<!-- Se não tiver pensamentos, exiba este mensagem -->
+<ng-template #semPensamentos>
+ <div class="ff-inter sem pensamentos">
+  <p>Ainda não há pensamentos cadastrados!</p>
+ </div>
+</ng-template>
