@@ -83,7 +83,8 @@
     </div>
     <div class="acoes">
       <button (click)="criarPensamento()" class="botao">Salvar</button>
-      <button (click)="cancelar()" class="botao">Cancelar</button>
+       <!-- Router link, fazer direcionamento para uma rota especifica -->
+      <button routerLink="/listarPensamento" (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>
