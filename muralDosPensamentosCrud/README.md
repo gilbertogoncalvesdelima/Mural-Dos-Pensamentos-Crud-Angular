@@ -250,6 +250,88 @@ Auto Import
 
 O routerLink inicia a navegação do componente, que será renderizado na diretiva <router-outlet>.
 
+## BAck-End
+
+ Para executar todas aquelas tarefas do "CRUD", precisamos de uma API (interface de programação de aplicações) já pronta.
+
+Para facilitar, vamos realizar uma simulação simples de back-end com uma ferramenta chamada JSON Server — uma biblioteca capaz de criar um REST JSON simulando uma API. Basta instalá-la e criar um arquivo .json, expondo as informações na API REST.
+
+No explorador à esquerda do VS Code acessaremos a pasta MEMOTECA, e dentro dela criaremos a pasta backend. No terminal, acessaremos essa pasta com o comando cd backend.
+
+
+```js
+cd backend
+```
+
+Dentro da pasta digitaremos o comando para criar o arquivo package.json.
+
+```js
+npm init -y
+```
+Também instalaremos o JSON Server.
+
+```js
+npm i json-server
+```
+Criaremos dentro da pasta backend o arquivo db.json, que conterá todos os recursos (ou endpoints) da API. Acessaremos o arquivo e criaremos um objeto que possuirá um arranjo de pensamentos.
+
+```js
+{
+    "pensamentos": []
+}
+```
+Como teste, criaremos três pensamentos. Copie e cole o trecho de código abaixo dentro do arranjo. Se quiser, pode trocar o conteúdo das strings e criar os pensamentos que quiser.
+
+Como teste, criaremos três pensamentos. Copie e cole o trecho de código abaixo dentro do arranjo. Se quiser, pode trocar o conteúdo das strings e criar os pensamentos que quiser.
+
+```js
+{
+    "pensamentos": [
+        {
+            "id": 1,
+            "conteudo": "Que bom que vc veio",
+            "autoria": "Nay",
+            "modelo": "modelo1"
+        },
+        {
+            "id": 2,
+            "conteudo": "Estudando Angular",
+            "autoria": "Dev Alura",
+            "modelo": "modelo2"
+        },
+        {
+            "id": 3,
+            "conteudo": "Angular é o melhor'",
+            "autoria": "Dev Alura",
+            "modelo": "modelo3"
+        }
+    ]
+}
+```
+
+Acessaremos em seguida o package.json. Na seção "scripts": {} temos o código abaixo:
+
+```js
+"test": "echo \"Error: no test specified\" && exit 1"
+```
+Mudaremos o comando "test" para "start" e substituiremos o conteúdo das aspas duplas.
+
+```js
+"start": "json-server --watch db.json --port 3000"
+```
+Dessa forma, configuramos o JSON Server para consultar o arquivo db.json e executar a API na porta 3000.
+
+Como teste, vamos executar um comando no terminal, ainda dentro da pasta backend.
+
+```js
+npm start
+```
+O terminal passará a carregar os recursos. A mensagem "Hi!" aparecerá e também será possível ver o nosso recurso ou endpoint na seção "Resources".
+
+Resources
+[Localhost](http://localhost:3000/pensamentos)
+
+
 ## Autor, Gilberto Gonçalves de Lima
 
 - [@github](https://github.com/gilbertogoncalvesdelima/Mural-Dos-Pensamentos-Crud-Angular)
