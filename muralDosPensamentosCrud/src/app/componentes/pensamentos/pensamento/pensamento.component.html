@@ -1,1 +1,14 @@
-<p>pensamento works!</p>
+<!-- Aqui pegamos o modelo, pensamento da class, typescript, no html -->
+<div class="pensamento {{ pensamento.modelo }} ff-roboto pensamento-p">
+  <img src="../../../../assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
+  <p class="conteudo">{{ pensamento.modelo }}</p>
+<p class="autoria"><b> {{ pensamento.autoria }}</b></p>
+<div class="acoes">
+  <button class="botao-editar">
+   <img src="../../../../assets/imagens/icone-editar.png" alt="Ícone de editar">
+  </button>
+  <button class="botao-excluir">
+    <img src="../../../../assets/imagens/icone-excluir.png" alt="Ícone de excluir">
+   </button>
+</div>
+</div>

@@ -7,6 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PensamentoComponent implements OnInit {
 
+  // Criamos um atributos, chamado pensamento, que sera um objeto com um conteudo
+  pensamento = {
+  conteudo: "I love Angular",
+  autoria: 'Gilberto',
+  modelo: 'modelo3'
+
+  }
+
   constructor() { }
 
   ngOnInit(): void {
