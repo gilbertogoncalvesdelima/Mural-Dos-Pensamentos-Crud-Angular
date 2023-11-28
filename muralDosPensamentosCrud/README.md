@@ -438,6 +438,96 @@ import { HttpClient } from '@angular/common/http';
 
 Com estes passos concluídos, temos acesso a todos os métodos da classe HttpClient. De acordo com a documentação do Angular, a injeção de dependências é um padrão de projeto no qual uma classe solicita dependências externas ao invés de criá-las
 
+## HTTP CLient
+
+Dentro do VS Code acessaremos o arquivo pensamento.service.ts e utilizaremos os métodos HTTP já injetados na classe para construir o "CRUD". Começaremos pelo método de listagem, criando o atributo API.
+
+Para conseguir a URL a ser utilizada, vamos acessar o terminal, clicar na seta ao lado direito, e depois clicar em "Git Bash" para abrir um novo terminal. Dentro do novo terminal, acessaremos a pasta backend através do comando cd backend. Em seguida, executaremos a API com o comando npm start. Depois da execução, copiaremos a URL que aparecerá na seção "Resources".
+
+
+Resources
+
+```js
+http://localhost:3000/pensamentos
+```
+Voltando ao interior da classe, dentro do exportvamos inserir o comando abaixo:
+
+```js
+private readonly API = 'http://localhost:3000/pensamentos'
+```
+
+Ainda dentro do export, abaixo do constructor acrescentaremos o método listar.
+
+```js
+export class PensamentoService {
+
+    private readonly API = 'http://localhost:3000/pensamentos'
+
+    constructor(private http: HttpClient) { }
+
+    listar() {
+    }
+```
+Para poder utilizar o HttpClient é preciso importar o seu módulo. Acessaremos o arquivo app.module.ts e na seção imports, abaixo de outros módulos já configurados, adicionaremos uma vírgula (,) e em seguida o módulo HttpClientModule.
+
+```js
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule
+  ],
+```
+A própria aplicação inserirá automaticamente o comando de importação abaixo. Caso contrário, podemos inseri-lo manualmente.
+
+```js
+ import { HttpClientModule} from '@angular/common/http';
+```
+Para configurarmos a listagem vamos voltar ao arquivo pensamento.service.ts. Dentro do método listar vamos inserir o comando return com o método get. Adicionaremos também a tipagem Pensamento[] que possui um arranjo de pensamentos.
+
+```js
+  listar() {
+        return this.http.get<Pensamento[]>(this.API)
+    }
+```
+
+Em seguida vamos importar a interface automaticamente para o service, clicando na caixa com a mensagem "Add import from "./pensamento"" que aparece junto ao código Pensamento[].
+
+Com este processo feito, temos um método dentro do service que solicitará ao HTTP a lista de pensamentos que se encontra na API e que vai recebê-la na forma de um arranjo de pensamentos.
+
+Vamos acessar o arquivo listar-pensamento.component.ts e configurá-lo para consumir o serviço. Liberaremos o acesso aos métodos declarados no service injetando-o dentro do construtor na seção export.
+
+```js
+export class ListarPensamentoComponent implements OnInit {
+
+    listaPensamentos: Pensamento[] = [];
+
+    constructor(private service: PensamentoService) { }
+```
+O comando de importação abaixo aparecerá automaticamente. Caso contrário, podemos inseri-lo manualmente.
+
+```js
+import { PensamentoService } from './../pensamento.service';
+```
+Agora o componente de listagem possui acesso a todos os métodos do serviço.
+
+Vamos inserir o método listar() que configuramos anteriormente dentro da seção ngOnInit() que se encontra abaixo do export. Essa seção faz parte da configuração do ciclo de vida do componente, portanto, nós vamos inserir dentro dela qualquer comando que queremos executar junto ao carregamento do componente.
+
+```js
+    ngOnInit(): void {
+        this.service.listar()
+    }
+```
+Após o "Enter", a aplicação será executada.
+
+É importante que o back-end esteja sendo executado ao mesmo tempo em outro terminal.
+
+Ao acessar o navegador, percebemos que o comando novo não está funcionando. O mural ainda exibe a mensagem "Ainda não há pensamentos cadastrados!".
+
+Voltando ao VS Code, acessaremos o arquivo pensamento.service.ts e posicionaremos o cursor em cima do método listar(). Será possível visualizar uma mensagem do sistema informando que o método listar() deve retornar um Observable.
+
+
+
 
 ## Autor, Gilberto Gonçalves de Lima
 
