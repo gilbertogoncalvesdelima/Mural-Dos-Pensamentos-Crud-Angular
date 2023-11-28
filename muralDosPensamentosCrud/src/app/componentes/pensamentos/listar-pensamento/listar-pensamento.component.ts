@@ -20,7 +20,12 @@ export class ListarPensamentoComponent implements OnInit {
     conteudo: "Minha propriedade é decorada com @Input()",
     autoria: "Componente Filho",
     modelo: "modelo2"
-  }
+  },
+  {
+    conteudo: "Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa  ",
+    autoria: " ",
+    modelo: "modelo1"
+  },
   ]
 
   constructor() { }

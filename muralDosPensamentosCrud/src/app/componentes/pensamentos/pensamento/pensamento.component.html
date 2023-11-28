@@ -1,5 +1,5 @@
 <!-- Aqui pegamos o modelo, pensamento da class, typescript, no html -->
-<div class="pensamento {{ pensamento.modelo }} ff-roboto pensamento-p">
+<div class="pensamento {{ pensamento.modelo }} ff-roboto-mono" [ngClass]="larguraPensamento()" >
   <img src="../../../../assets/imagens/{{ pensamento.modelo }}.png" alt="Aspas coloridas">
   <p class="conteudo">{{ pensamento.modelo }}</p>
 <p class="autoria"><b> {{ pensamento.autoria }}</b></p>

@@ -20,5 +20,12 @@ export class PensamentoComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  // Se for o caracter maior que 256, return a class do css especifica
+  larguraPensamento(): string {
+    if(this.pensamento.conteudo.length >= 256) {
+      return 'pensamento-g'
+    }
+    return 'pensamento-p'
+  }
 
 }
