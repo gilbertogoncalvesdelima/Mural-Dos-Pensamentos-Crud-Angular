@@ -331,6 +331,93 @@ O terminal passará a carregar os recursos. A mensagem "Hi!" aparecerá e també
 Resources
 [Localhost](http://localhost:3000/pensamentos)
 
+## Interface, tipando o que é um string e um number
+
+Para evitar que ocorram erros na base de dados e garantir a sua integridade, devemos criar um modelo de retorno da API. No Angular, chamamos este modelo de "interface", ou "tipagem estrutural".
+
+Criaremos uma interface diretamente no explorador à esquerda. Dentro da pasta pensamentos, damos um clique com o botão direito e criamos um novo arquivo chamado pensamento.ts. Também é possível criar a interface pelo terminal, mas não faremos isso.
+
+Dentro de pensamento.ts, criaremos uma interface de nome Pensamento, com inicial maiúscula. Nesta interface, colocaremos todos os atributos e os respectivos formatos esperados. Também incluiremos a classe export, para tornar essa interface acessível à outras classes.
+
+```js
+export interface Pensamento {
+    id: number
+    conteudo: string
+    autoria: string
+    modelo: string
+}
+```
+Se houvessem outros atributos em nosso package.json, eles também seriam incluídos na interface.
+
+A interface ou tipagem que construímos é como um contrato que deve ser seguido por ambas as partes — front-end e back-end.
+
+Como a interface que inserimos ajuda dentro da aplicação? Se tivéssemos incluído um atributo com o formato errado ou se esquecêssemos de informar algum atributo, o VS Code sinalizaria o erro.
+
+Vamos listar dois exemplos de erro:
+
+se deixarmos de passar o atributo id, o VS Code fará uma sinalização sublinhando o nome da classe de vermelho e abrindo uma caixa de mensagem com a descrição do erro.
+se passarmos o dado do id do tipo errado (uma string em vez de um number), o VS Code fará o sublinhando no nome do atributo e abrirá também uma caixa de erro.
+Acessaremos três arquivos typescript e dentro deles vamos inserir a variável Pensamento, que deve receber a tipagem de Pensamento. Após o "Enter", a aplicação fará o import automático dessa variável.
+
+A primeira inclusão será feita no arquivo pensamento.component.ts..
+
+```js
+
+@Input() pensamento: Pensamento = {
+    id: 0, // colocamos o valor 0 pois os dados reais do `id` virão do componente "pai".
+    conteudo: 'I love Angular',
+    autoria: 'Nay',
+    modelo: 'modelo3'
+}
+```
+
+A segunda inclusão será feita no arquivo criar-pensamento.component.ts.
+
+```js
+   pensamento: Pensamento = {
+        id: 1,
+        conteudo: 'Aprendendo Angular'
+        autoria: 'Dev',
+        modelo: 'modelo1'
+    }
+```
+A terceira inclusão será feita no arquivo listar-pensamento.component.ts.
+Dentro do arranjo listaPensamentos[] vamos incluir a variável Pensamento como um arranjo de pensamentos adicionando colchetes []. Depois vamos deletar quaisquer dados manuais que inserimos anteriormente dentro de listaPensamentos[]. Manteremos os dois arranjos vazios, já que o conteúdo de ambos virá do back-end.
+
+```js
+listaPensamentos: Pensamento[] = [];
+```
+
+Agora estamos utilizando o modelo da interface nos três arquivos.
+
+## Services
+
+A estrutura do Angular é muito organizada, e cada arquivo possui uma habilidade bem definida. Portanto, como boa prática de programação, qualquer arquivo com a terminação component.ts deve conter apenas a lógica para definição dos comportamentos e possibilitar a renderização dos arquivos na tela.
+
+Considerando essa boa prática, é necessário criar um arquivo service (serviço, em português) que contenha a lógica de negócios e que seja responsável pela comunicação com o servidor. Este arquivo contém todas as requisições ao servidor, ao mesmo tempo que nos auxilia a separar informações importantes e o modo de obtê-las.
+
+No terminal do VS Code, criaremos um service através do comando ng g service, ou apenas ng g s, em conjunto com a descrição do caminho em que ele será criado, e depois apertaremos "Enter".
+
+```js
+ng g s componentes/pensamentos/pensamento
+```
+Constataremos que dois arquivos foram criados: o serviço pensamento.service.ts e o arquivo de testes pensamento.service.spec.ts. Acessaremos o arquivo do serviço através do explorador à esquerda e o analizaremos.
+
+O arquivo service se trata de uma classe typescript que possui o decorador @Injectable do pacote @angular/core. Isso significa que esta classe é "injetável", ou seja, pode ser utilizada em outros componentes e classes através do método de injeção de dependências, que detalharemos posteriormente.
+
+O service também possui o metadado providedIn com o valor root, que indica a disponibilidade de utilização ou injeção desta classe por toda a aplicação. Além disso, o arquivo possui um export para a classe PensamentoService e dentro dele existe um constructor. Posteriormente, adicionaremos dentro do serviço os métodos de cadastro, listagem, edição e exclusão, ou "CRUD".
+
+```js
+import { Injectable } from '@angular/core';
+
+@Injectable({
+    providedIn: 'root'
+})
+export class PensamentoService {
+
+    constructor() { }
+}
+```
 
 ## Autor, Gilberto Gonçalves de Lima
 
