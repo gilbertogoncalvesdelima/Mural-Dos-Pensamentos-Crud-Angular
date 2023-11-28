@@ -662,7 +662,12 @@ Voltando ao arquivo criar-pensamento.component.ts, vamos inserir a mesma funçã
 
   Após esse procedimento, se criarmos um pensamento de teste e pressionarmos "Salvar" ou "Cancelar", ocorrerá o redirecionamento para a página do mural.
 
+## Resumo
 
+ngIf — para mostrar a mensagem de que ainda não existem pensamentos cadastrados;
+ngFor — para renderizar uma sequência de pensamentos;
+ngClass — para aplicar estilização condicional.
+Aprendeu também sobre os services e como utilizar as injeções de dependências. Além disso, é capaz de realizar a comunicação com o servidor através do httpClient dos métodos get, post, put e delete, completando o "CRUD".
 
 ## Autor, Gilberto Gonçalves de Lima
 
