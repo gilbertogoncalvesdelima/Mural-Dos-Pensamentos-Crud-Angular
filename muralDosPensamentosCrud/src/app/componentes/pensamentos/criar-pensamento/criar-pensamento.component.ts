@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './criar-pensamento.component.html',
   styleUrls: ['./criar-pensamento.component.css']
 })
+
 export class CriarPensamentoComponent implements OnInit {
 
   pensamento = {
