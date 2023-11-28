@@ -5,8 +5,11 @@
       <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
   </header>
   <div class="mural">
+    <!-- let Pensamento, variavel local, representando cada um dos elementos da lista -->
     <div *ngFor="let pensamento of listaPensamentos">
-      <app-pensamento></app-pensamento>
+      <!--property binding, [pensamento], que declaramos no @input, no arquivo pensamento.component.ts, -->
+      <!-- "´pensamento", é a variavel local que foi criado, pensamento -->
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
     </div>
   </div>
 </section>
