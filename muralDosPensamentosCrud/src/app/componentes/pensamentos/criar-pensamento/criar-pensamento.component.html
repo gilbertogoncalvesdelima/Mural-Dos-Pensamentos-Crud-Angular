@@ -31,7 +31,9 @@
           type="radio"
           id="modelo1"
           value="modelo1"
-          name="modelo-card">
+          name="modelo-card"
+          [(ngModel)]="pensamento.modelo"
+          >
 
           <!-- Modelo 1 -->
           <div class="custom-radio">
@@ -50,7 +52,13 @@
       <!-- Modelo 2 -->
       <div class="radio-modelo">
         <label for="modelo2">
-          <input type="radio" id="modelo2" value="modelo2" name="modelo-card">
+          <input
+          type="radio"
+          id="modelo2"
+          value="modelo2"
+          name="modelo-card"
+          [(ngModel)]="pensamento.modelo"
+          >
           <div class="custom-radio">
             <span></span>
           </div>
@@ -67,7 +75,13 @@
       <!-- Modelo 3 -->
       <div class="radio-modelo">
         <label for="modelo3">
-          <input type="radio" id="modelo3" value="modelo3" name="modelo-card">
+          <input
+          type="radio"
+          id="modelo3"
+          value="modelo3"
+          name="modelo-card"
+          [(ngModel)]="pensamento.modelo"
+          >
           <div class="custom-radio">
             <span></span>
           </div>
