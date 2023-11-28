@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pensamento } from '../pensamento';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -9,23 +10,23 @@ import { Component, OnInit } from '@angular/core';
 export class ListarPensamentoComponent implements OnInit {
 
  //Criado um atributo chamado listaPensamentos
-  listaPensamentos = [
+  listaPensamentos: Pensamento[]  = [
     // Teste Lista
-  {
-    conteudo: "Passo informação para o componente filho",
-    autoria: "Componente pai",
-    modelo: "modelo3"
-  },
-  {
-    conteudo: "Minha propriedade é decorada com @Input()",
-    autoria: "Componente Filho",
-    modelo: "modelo2"
-  },
-  {
-    conteudo: "Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa  ",
-    autoria: " ",
-    modelo: "modelo1"
-  },
+  // {
+  //   conteudo: "Passo informação para o componente filho",
+  //   autoria: "Componente pai",
+  //   modelo: "modelo3"
+  // },
+  // {
+  //   conteudo: "Minha propriedade é decorada com @Input()",
+  //   autoria: "Componente Filho",
+  //   modelo: "modelo2"
+  // },
+  // {
+  //   conteudo: "Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa Minha propriedade é decoraa  ",
+  //   autoria: " ",
+  //   modelo: "modelo1"
+  // },
   ]
 
   constructor() { }
