@@ -34,7 +34,7 @@ const routes: Routes = [
     component: ExcluirPensamentoComponent
   },
   {
-    // 3 Rota criada
+    // 4 Rota criada
     path: 'pensamentos/editarPensamento/:id',
     // Qual componente, aparecer, depois de estar na rota
     component: EditarPensamentoComponent

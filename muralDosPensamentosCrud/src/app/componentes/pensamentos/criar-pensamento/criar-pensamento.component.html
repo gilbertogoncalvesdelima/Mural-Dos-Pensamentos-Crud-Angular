@@ -1,7 +1,10 @@
 <section class="container criar-pensamentos ff-inter">
+  <!-- Header -->
   <header class="header">
     <h2>Adicione um <br>pensamento novo:</h2>
   </header>
+
+  <!-- Formulario, começo--------------------------------------------------------------------------------- -->
   <form>
     <label for="pensamento">Pensamento</label>
     <input
@@ -12,6 +15,7 @@
     placeholder="Digite o pensamento"
     [(ngModel)]="pensamento.conteudo"
     >
+    <!-- ngModel, A diretivangModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -22,6 +26,8 @@
     placeholder="Digite a autoria ou fonte"
     [(ngModel)]="pensamento.autoria"
     >
+    <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
 
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
@@ -34,8 +40,10 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+      <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
-          <!-- Modelo 1 -->
+      <!-- Modelo 1--------------------------------------------------------------------------------- -->
+
           <div class="custom-radio">
             <span></span>
           </div>
@@ -44,12 +52,14 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
+          <!-- Aqui foi utilizado a interpolação, {{ }}, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria"><b>{{pensamento.autoria }}</b></p>
         </div>
       </div>
 
-      <!-- Modelo 2 -->
+
+      <!-- Modelo 2--------------------------------------------------------------------------------- -->
       <div class="radio-modelo">
         <label for="modelo2">
           <input
@@ -59,6 +69,8 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+      <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
           <div class="custom-radio">
             <span></span>
           </div>
@@ -67,12 +79,14 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul claro">
+      <!-- Aqui foi utilizado a interpolação, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria"><b>{{pensamento.autoria }}</b></p>
         </div>
       </div>
 
-      <!-- Modelo 3 -->
+
+      <!-- Modelo 3--------------------------------------------------------------------------------- -->
       <div class="radio-modelo">
         <label for="modelo3">
           <input
@@ -82,6 +96,8 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+       <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
           <div class="custom-radio">
             <span></span>
           </div>
@@ -90,14 +106,17 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
+          <!-- Aqui foi utilizado a interpolação, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
           <p class="conteudo"> {{ pensamento.conteudo }} </p>
           <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
         </div>
       </div>
     </div>
     <div class="acoes">
+      <!-- Nos botton, foi utilzado o Event Binding e quando ele tem () -->
       <button (click)="criarPensamento()" class="botao">Salvar</button>
       <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
+  <!-- Formulario, Fim--------------------------------------------------------------------------------- -->
   </form>
 </section>

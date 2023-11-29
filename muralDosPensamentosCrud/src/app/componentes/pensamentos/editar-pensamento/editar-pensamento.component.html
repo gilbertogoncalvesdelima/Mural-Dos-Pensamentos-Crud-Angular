@@ -12,6 +12,8 @@
     placeholder="Digite o pensamento"
     [(ngModel)]="pensamento.conteudo"
     >
+   <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
 
     <label for="autoria">Autoria ou fonte</label>
     <input
@@ -22,6 +24,7 @@
     placeholder="Digite a autoria ou fonte"
     [(ngModel)]="pensamento.autoria"
     >
+  <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
@@ -34,6 +37,8 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+      <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
 
           <!-- Modelo 1 -->
           <div class="custom-radio">
@@ -44,6 +49,7 @@
         Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
+          <!-- Interpolação, {{`}} -->
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria"><b>{{pensamento.autoria }}</b></p>
         </div>
@@ -59,6 +65,8 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+        <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
           <div class="custom-radio">
             <span></span>
           </div>
@@ -67,6 +75,7 @@
         Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul claro">
+          <!-- Interpolação, {{ }} -->
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria"><b>{{pensamento.autoria }}</b></p>
         </div>
@@ -82,6 +91,8 @@
           name="modelo-card"
           [(ngModel)]="pensamento.modelo"
           >
+      <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
+
           <div class="custom-radio">
             <span></span>
           </div>
@@ -90,12 +101,14 @@
         Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
+       <!-- Interpolação, {{ }} -->
           <p class="conteudo"> {{ pensamento.conteudo }} </p>
           <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
         </div>
       </div>
     </div>
     <div class="acoes">
+        <!-- Event Binding,  e quando tem (), quando clicar em cada botton, ira chamar a funcão criado no arquivo, .ts -->
       <button (click)="editarPensamento()" class="botao">Salvar</button>
       <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>

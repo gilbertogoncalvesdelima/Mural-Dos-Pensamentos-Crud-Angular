@@ -32,12 +32,13 @@ export class ExcluirPensamentoComponent implements OnInit {
     // snapshot faz uma captura de imagem
     // paramMap, ela nos tras informações como se fosse um map, obrigatorios e opcionais, daquele pensamento
     const id = this.route.snapshot.paramMap.get('id')
-
+    // O nome parseInt vem da ideia de "inteiro" (integer) e "analisar" (parse), indicando que a função está analisando uma string para extrair um valor inteiro dela.
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
       this.pensamento = pensamento
     }
     )
   }
+  // Excluir Pensamento
   excluirPensamento() {
     if(this.pensamento.id) {
       this.service.excluir(this.pensamento.id).subscribe(() => {
@@ -45,7 +46,7 @@ export class ExcluirPensamentoComponent implements OnInit {
       })
     }
   }
-
+  // Cancelar pensamentos
   cancelar() {
     this.router.navigate(['/listarPensamento'])
   }

@@ -25,6 +25,7 @@ import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pens
     EditarPensamentoComponent
   ],
   imports: [
+    // O BrowserModule configura os serviços necessários para manipulação do DOM (Modelo de Objeto de Documento) em um ambiente de navegador.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
