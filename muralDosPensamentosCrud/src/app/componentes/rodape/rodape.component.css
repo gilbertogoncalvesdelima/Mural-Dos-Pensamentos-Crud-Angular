@@ -9,6 +9,10 @@ footer {
   align-items: center;
   padding: 1rem 2rem;
 }
+.Date{
+  justify-self: center;
+  color: white;
+}
 
 .TextoCopyright {
   justify-self: center;

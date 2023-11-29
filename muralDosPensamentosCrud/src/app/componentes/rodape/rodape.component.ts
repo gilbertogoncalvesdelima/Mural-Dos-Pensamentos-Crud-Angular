@@ -7,7 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RodapeComponent implements OnInit {
 
-  constructor() { }
+  // Declaração da variável dataHoraAtual
+  dataHoraAtual: Date;
+
+
+  constructor() {
+  // Inicialização da variável dataHoraAtual com a data e hora atuais
+  this.dataHoraAtual = new Date();
+  }
 
   ngOnInit(): void {
   }
