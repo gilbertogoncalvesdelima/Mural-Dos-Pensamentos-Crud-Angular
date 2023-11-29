@@ -662,6 +662,36 @@ Voltando ao arquivo criar-pensamento.component.ts, vamos inserir a mesma funçã
 
   Após esse procedimento, se criarmos um pensamento de teste e pressionarmos "Salvar" ou "Cancelar", ocorrerá o redirecionamento para a página do mural.
 
+  ## FormBuilder
+  Para saber mais: construindo formulários reativos
+
+  No angular, existe mais de uma forma de criar formulários reativos. Você pode criar um novo formulário, atribuindo a ele uma nova instância da classe FormGroup e, para cada input, uma instância da classe FormControl. Assim:
+
+```js
+    ngOnInit(): void {
+    this.formulario = new FormGroup({
+      conteudo: new FormControl(''),
+      autoria: new FormControl(''),
+      modelo: new FormControl('')
+    })
+  }
+```
+No lugar de instanciar um FormGroup e um FormControl para cada campo do formulário, você pode utilizar o construtor de formulários do angular, o FormBuilder e utilizar uma sintaxe simplificada, como visto na aula. Por “debaixo dos panos”, o FormBuilder vai atribuir os controles aos campos, sem precisarmos nos preocupar com isso.
+
+
+```js
+ngOnInit(): void {
+    this.formulario = this.formBuilder.group({
+      conteudo: [''],
+      autoria: [''],
+      modelo: ['']
+    })
+  }
+```
+É importante ressaltar que as duas formas estão corretas e podem ser utilizadas de acordo com a preferência da pessoa desenvolvedora
+
+
+
 ## Resumo
 
 ngIf — para mostrar a mensagem de que ainda não existem pensamentos cadastrados;
