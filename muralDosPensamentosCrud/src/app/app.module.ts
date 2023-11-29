@@ -14,6 +14,7 @@ import { ExcluirPensamentoComponent } from './componentes/pensamentos/excluir-pe
 import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pensamento/editar-pensamento.component';
 
 @NgModule({
+  // Componentes Declarados e importados
   declarations: [
     AppComponent,
     CabecalhoComponent,
@@ -27,8 +28,11 @@ import { EditarPensamentoComponent } from './componentes/pensamentos/editar-pens
   imports: [
     // O BrowserModule configura os serviços necessários para manipulação do DOM (Modelo de Objeto de Documento) em um ambiente de navegador.
     BrowserModule,
+    // AppRoutingModule, é um módulo que normalmente é usado para configurar as rotas do aplicativo.
     AppRoutingModule,
+    //FormsModule, Ele oferece uma variedade de recursos e diretivas que facilitam a interação com formulários HTML e a validação de dados do usuário exemplo, Controle de Estado do Formulário, Two-Way Data Binding, Permite o uso do [(ngModel)] para alcançar o two-way data binding entre campos de formulário e propriedades do componente. Isso significa que as alterações nos campos do formulário refletirão automaticamente nas propriedades do componente e vice-versa.
     FormsModule,
+    //HttpClientModule, Ele oferece um conjunto de recursos que simplificam a comunicação com servidores HTTP, como a execução de requisições GET, POST, PUT, DELETE e a manipulação de respostas.
     HttpClientModule
   ],
   providers: [],
