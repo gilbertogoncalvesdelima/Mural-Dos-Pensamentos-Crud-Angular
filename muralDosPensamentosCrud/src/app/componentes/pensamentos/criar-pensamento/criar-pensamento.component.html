@@ -5,13 +5,13 @@
   </header>
 
   <!-- Formulario, começo--------------------------------------------------------------------------------- -->
-  <form>
+  <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
     type="textarea"
     class="input"
     id="pensamento"
-    name="pensamento"
+    formControlName="conteudo"
     placeholder="Digite o pensamento"
     >
     <!-- ngModel, A diretivangModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
@@ -21,7 +21,7 @@
     type="text"
     class="input"
     id="autoria"
-    name="autoria"
+    formControlName="autoria"
     placeholder="Digite a autoria ou fonte"
     >
     <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
@@ -35,7 +35,7 @@
           type="radio"
           id="modelo1"
           value="modelo1"
-          name="modelo-card"
+          formControlName="modelo"
           >
       <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
@@ -50,8 +50,8 @@
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo1.png" alt="Aspas azuis">
           <!-- Aqui foi utilizado a interpolação, {{ }}, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
-          <p class="conteudo">{{  }}</p>
-          <p class="autoria"><b>{{ }}</b></p>
+          <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
+          <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
 
@@ -63,7 +63,7 @@
           type="radio"
           id="modelo2"
           value="modelo2"
-          name="modelo-card"
+          formControlName="modelo"
           >
       <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
@@ -76,8 +76,8 @@
         <div class="modelo modelo2 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo2.png" alt="Aspas azul claro">
       <!-- Aqui foi utilizado a interpolação, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
-          <p class="conteudo">{{   }}</p>
-          <p class="autoria"><b>{{   }}</b></p>
+      <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
+      <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
 
@@ -89,7 +89,7 @@
           type="radio"
           id="modelo3"
           value="modelo3"
-          name="modelo-card"
+          formControlName="modelo"
           >
        <!-- ngModel, A diretiva ngModel é muito utilizada em formulários justamente pela sua capacidade de realizar uma vinculação bidirecional. -->
 
@@ -102,8 +102,8 @@
         <div class="modelo modelo3 ff-roboto-mono">
           <img src="../../../../assets/imagens/modelo3.png" alt="Aspas verdes">
           <!-- Aqui foi utilizado a interpolação, para buscar o nome pensamento, que é o atributo que está no arquivo .ts e o conteudo que é a propriedade  -->
-          <p class="conteudo"> {{   }} </p>
-          <p class="autoria"><b>{{    }}</b></p>
+          <p class="conteudo">{{ formulario.get('conteudo')?.value }}</p>
+          <p class="autoria"><b>{{ formulario.get('autoria')?.value }}</b></p>
         </div>
       </div>
     </div>
