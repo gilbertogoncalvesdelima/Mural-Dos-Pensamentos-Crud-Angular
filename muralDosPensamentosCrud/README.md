@@ -690,7 +690,34 @@ ngOnInit(): void {
 ```
 É importante ressaltar que as duas formas estão corretas e podem ser utilizadas de acordo com a preferência da pessoa desenvolvedora
 
+## Para saber mais: validações da classe Validators
 
+Os “validators” ou validadores, são mais uma facilidade que o Angular traz no pacote @angular/forms. Essa classe já traz inúmeros tipos de validações prontas para serem utilizadas. É incrível como isso facilita o desenvolvimento. Um validador é uma função que processa uma coleção de controles e retorna um erro ou nulo (o retorno nulo significa que a validação foi aprovada).
+
+Você conheceu na aula, o Validators.required(), Validators.minLenght(), Validators.pattern() e o Validators.compose(), mas existem diversos outros tipos de validação presentes na classe Validators. Conheça:
+
+Validators.min()
+
+Validador que exige que o valor do controle seja maior ou igual ao número fornecido.
+Validators.max()
+
+Validador que exige que o valor do controle seja menor ou igual ao número fornecido.
+Validators.requiredTrue()
+
+Validador que exige que o valor do controle seja verdadeiro. Este validador é comumente usado para caixas de seleção obrigatórias.
+Validators.email()
+
+Validador que exige que o valor do controle passe em um teste de validação de email.
+Validators.maxLength()
+
+Validador que exige que o comprimento do valor do controle seja menor ou igual ao tamanho máximo fornecido.
+Validators.nullValidator()
+
+Validador de valores nulos.
+Validators.composeAsync()
+
+Compõe vários validadores assíncronos em uma única função que retorna a união dos objetos de erro individuais para o controle fornecido.
+Na documentação do [Documentação Validators Angular](https://angular.io/api/forms/Validators#description) Angular, você pode encontrar mais detalhes sobre a classe Validators.
 
 ## Resumo
 
