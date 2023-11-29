@@ -16,3 +16,24 @@
   text-align: center;
   padding: 2rem 0 5rem;
 }
+
+/* Defina as cores que você quer usar em uma lista */
+.ff-inter {
+  color: #ff0000; /* Cor inicial, você pode ajustar */
+  animation: changeColor 2s infinite;
+}
+
+@keyframes changeColor {
+  0%, 100% {
+    color: #ff0000; /* Cor inicial */
+  }
+  25% {
+    color: #00ff00; /* Cor após 0.5 segundos (25% de 2s) */
+  }
+  50% {
+    color: #0000ff; /* Cor após 1 segundo (50% de 2s) */
+  }
+  75% {
+    color: #ffff00; /* Cor após 1.5 segundos (75% de 2s) */
+  }
+}
