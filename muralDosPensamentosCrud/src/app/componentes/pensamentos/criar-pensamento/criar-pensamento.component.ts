@@ -25,14 +25,23 @@ export class CriarPensamentoComponent implements OnInit {
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
       // Validators.required, preenchimento obrigatorio
-      conteudo:['', [Validators.required]],
-      autoria: ['', [Validators.required]],
+      conteudo:['', Validators.compose([
+        Validators.required,
+        // Expressão regular que não permiti que coloque apenas espaços vazios,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+
+      ])],
+      autoria: ['', Validators.compose([
+        Validators.required,
+        // Quantidade minima de caracteres
+        Validators.minLength(3)
+      ])],
       modelo: ['modelo1']
     })
   }
   // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário
   criarPensamento() {
-    console.log(this.formulario)
+    console.log(this.formulario.status)
     // Si o formulario for valido, eu quero que o formulario seja criado
   if(this.formulario.valid) {
     this.service.criar(this.formulario.value).subscribe(() => {
