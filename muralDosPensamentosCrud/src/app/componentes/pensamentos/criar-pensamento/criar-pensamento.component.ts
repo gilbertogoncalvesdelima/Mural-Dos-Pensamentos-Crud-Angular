@@ -41,7 +41,7 @@ export class CriarPensamentoComponent implements OnInit {
   }
   // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário
   criarPensamento() {
-    console.log(this.formulario.status)
+    console.log(this.formulario.get('autoria')?.errors)
     // Si o formulario for valido, eu quero que o formulario seja criado
   if(this.formulario.valid) {
     this.service.criar(this.formulario.value).subscribe(() => {

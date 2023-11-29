@@ -1,28 +1,3 @@
 {
-  "pensamento": [
-    {
-      "conteudo": "Azul Claro",
-      "autoria": "Descrição Azul Claro",
-      "modelo": "modelo2",
-      "id": 2
-    },
-    {
-      "conteudo": "Verde",
-      "autoria": "Descrição Verde",
-      "modelo": "modelo3",
-      "id": 3
-    },
-    {
-      "conteudo": "Azul",
-      "autoria": "Azul descrição",
-      "modelo": "modelo1",
-      "id": 4
-    },
-    {
-      "conteudo": "     sddsdsd",
-      "autoria": "aassa",
-      "modelo": "modelo1",
-      "id": 6
-    }
-  ]
+  "pensamento": []
 }
