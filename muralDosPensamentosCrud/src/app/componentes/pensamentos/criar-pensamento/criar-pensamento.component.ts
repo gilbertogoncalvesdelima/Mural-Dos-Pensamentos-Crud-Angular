@@ -2,7 +2,7 @@ import { PensamentoService } from './../pensamento.service';
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -24,16 +24,21 @@ export class CriarPensamentoComponent implements OnInit {
   // NgOnInit, Para que serve: Ele é chamado uma única vez após a inicialização do componente.
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      conteudo:['Formulario reativo'],
-      autoria: ['Angular'],
+      // Validators.required, preenchimento obrigatorio
+      conteudo:['', [Validators.required]],
+      autoria: ['', [Validators.required]],
       modelo: ['modelo1']
     })
   }
   // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário
   criarPensamento() {
-  this.service.criar(this.formulario.value).subscribe(() => {
-    this.router.navigate(['/listarPensamento'])
-  })
+    console.log(this.formulario)
+    // Si o formulario for valido, eu quero que o formulario seja criado
+  if(this.formulario.valid) {
+    this.service.criar(this.formulario.value).subscribe(() => {
+      this.router.navigate(['/listarPensamento'])
+    })
+   }
   }
   cancelar() {
     this.router.navigate(['/listarPensamento'])
