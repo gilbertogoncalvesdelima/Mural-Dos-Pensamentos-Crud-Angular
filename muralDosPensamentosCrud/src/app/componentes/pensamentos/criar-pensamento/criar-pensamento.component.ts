@@ -12,12 +12,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 
 export class CriarPensamentoComponent implements OnInit {
 
-
-  pensamento: Pensamento = {
-    conteudo: '',
-    autoria: '',
-    modelo: 'modelo1'
-  }
   // FormGrupo, ele serve para construção de formulários, que o angular nos fornece
   formulario!: FormGroup;
 
@@ -35,8 +29,9 @@ export class CriarPensamentoComponent implements OnInit {
       modelo: ['modelo1']
     })
   }
+  // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário
   criarPensamento() {
-  this.service.criar(this.pensamento).subscribe(() => {
+  this.service.criar(this.formulario.value).subscribe(() => {
     this.router.navigate(['/listarPensamento'])
   })
   }
