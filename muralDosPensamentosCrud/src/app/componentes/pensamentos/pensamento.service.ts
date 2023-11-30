@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Pensamento } from './pensamento';
 import { Observable } from 'rxjs';
 
@@ -18,11 +18,21 @@ export class PensamentoService {
   private readonly API = "http://localhost:3000/pensamento"
 
   //Observable irá, ficar observando
-  listar(): Observable<Pensamento[]> {
+  listar(pagina: number): Observable<Pensamento[]> {
+
+  const intensPorPagina = 6;
+  // HttpParams, ele representa o corpo da requisição com a resposta http, incluindo os paramentros a serem realizados
+  // .set, serve para substituir um valor, aonde passamos o nome do parametro e o valor
+  let params = new HttpParams()
+    .set("_page", pagina)
+    .set("_limit", intensPorPagina)
 
   //Trazendo a lista de pensamentos que está na API
-  return this.http.get<Pensamento[]>(this.API)
+  //Outro jeito,  return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${intensPorPagina}`)
+  // { params: ´params }, quando temos a variavel, com o mesmo nome que esta dentro da chave, podemos omitir e deixar somente o nome params
+  return this.http.get<Pensamento[]>(this.API, { params })
   }
+
   // Criar Pensamento
   criar(pensamento: Pensamento): Observable<Pensamento> {
     return this.http.post<Pensamento>(this.API, pensamento)
