@@ -4,7 +4,7 @@
   <p class="conteudo">{{ pensamento.conteudo }}</p>
   <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
 <div class="acoes">
-  <button class="botao-favorito">
+  <button class="botao-favorito" (click)="atualizarFavoritos()">
     <!-- Interessante, dentro da interpolação {{ }}, podemos passar propriedades, mas também posso passar expressões e até chamados de métodos  -->
   <img src="../../../../assets/imagens/icone-favorito-{{ mudarIconeFavorito() }}.png"
   alt="Ícone favorito {{ mudarIconeFavorito() }}">

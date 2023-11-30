@@ -48,6 +48,14 @@ export class PensamentoService {
     const url = `${this.API}/${pensamento.id}`
     return this.http.put<Pensamento>(url, pensamento)
   }
+
+  // Metodo para fazer a atulização do pensamento
+  mudarFavorito(pensamento: Pensamento): Observable<Pensamento> {
+    // Caso a propriedade favorito ficar true, então ele ficara false e caso seja false ficara true
+    pensamento.favorito = !pensamento.favorito
+    return this.editar(pensamento)
+  }
+
   //Excluir pensamento
   excluir(id: number): Observable<Pensamento> {
     const url = `${this.API}/${id}`
