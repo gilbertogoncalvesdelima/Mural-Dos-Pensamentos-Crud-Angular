@@ -766,6 +766,40 @@ criar-pensamento.component.html
         Esse campo aceita apenas letras minúsculas
 </div>
 ```
+## HttpParams
+
+A classe HttpParams representa um corpo de requisição/resposta HTTP com parâmetros serializados.
+
+Esta classe é imutável, ou seja, todas as operações de mutação retornam uma nova instância. O método ‘set’ que utilizamos, serve para substituir o valor de um parâmetro. É enviado o nome do parâmetro e o seu valor e é retornado um novo corpo com um novo valor.
+
+Conheça os outros métodos do HttpParams:
+
+HttpParams.has()
+
+Informa se o corpo inclui um ou mais valores para um determinado parâmetro.
+HttpParams.get()
+
+Recupera o primeiro valor de um parâmetro.
+HttpParams.getAll()
+
+Recupera todos os valores de um parâmetro.
+HttpParams.keys()
+
+Recupera todos os parâmetros para este corpo da requisição.
+HttpParams.append()
+
+Acrescenta um novo valor aos valores existentes para um parâmetro.
+HttpParams.appendAll()
+
+Constrói um novo corpo com valores anexados para o nome do parâmetro fornecido.
+HttpParams.delete()
+
+Remove um determinado valor ou todos os valores de um parâmetro.
+HttpParams.toString()
+
+Serializa o corpo da requisição em uma string codificada, em que os pares de chave-valor (separados por =) são separados por & s.
+Acesse mais detalhes sobre o HttpParams na documentação do Angular.
+[Documentação HttpParams, Angular](https://angular.io/api/common/http/HttpParams)
 
 resumo:
 
