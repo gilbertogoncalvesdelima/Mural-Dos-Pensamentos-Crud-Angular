@@ -39,7 +39,8 @@ export class CriarPensamentoComponent implements OnInit {
         // Aceita apenas letras minusculas
         minusculoValidator
       ])],
-      modelo: ['modelo1']
+      modelo: ['modelo1'],
+      favorito: [false]
     })
   }
   // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário

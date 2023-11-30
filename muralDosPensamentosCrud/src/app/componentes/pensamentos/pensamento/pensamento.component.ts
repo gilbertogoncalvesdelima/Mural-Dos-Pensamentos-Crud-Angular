@@ -12,10 +12,11 @@ export class PensamentoComponent implements OnInit {
   // Criamos um atributos, chamado pensamento, que sera um objeto com um conteudo
   // Foi utilizado o decorator, @Input, no html foi feito um property binding, da propriedade pensamento, no html do listar pensamentos e ira receber informações do componente Pai
   @Input() pensamento: Pensamento = {
-  id: 0,
-  conteudo: 'I love Angular',
-  autoria: 'Gilberto',
-  modelo: 'modelo3'
+    id: 0,
+    conteudo: 'I love Angular',
+    autoria: 'Gilberto',
+    modelo: 'modelo3',
+    favorito: false
   }
 
   constructor() { }
@@ -29,5 +30,13 @@ export class PensamentoComponent implements OnInit {
     }
     return 'pensamento-p'
   }
+
+  mudarIconeFavorito(): string {
+    if(this.pensamento.favorito == false) {
+      return 'inativo'
+    }
+    return 'ativo'
+  }
+
 
 }

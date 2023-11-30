@@ -50,7 +50,8 @@ export class EditarPensamentoComponent implements OnInit {
         // Aceita apenas letras minusculas
         minusculoValidator
       ])],
-      modelo: [pensamento.modelo]
+      modelo: [pensamento.modelo],
+      favorito: [pensamento.favorito]
     })
   })
 }
