@@ -1,5 +1,16 @@
 <section class="container">
   <header class="header d-flex">
+      <div class="buscar-pensamentos">
+        <input type="search"
+        type="search"
+        class="filtro"
+        placeholder="O que você procura?"
+        autofocus
+        [(ngModel)]="filtro"
+        >
+        <img src="../../../../assets/imagens/lupa.png" alt="Lupa azul">
+        <!-- Autofocus, receba o campo automático, assim que aplicação for carregada -->
+      </div>
       <h2 class="ff-mural">Meu Mural</h2>
       <!-- Router link, fazer direcionamento para uma rota especifica -->
       <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
