@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Pensamento } from '../pensamento';
 import { PensamentoService } from '../pensamento.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router, ActivatedRoute  } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -10,38 +10,65 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditarPensamentoComponent implements OnInit {
 
-  pensamento: Pensamento = {
-    id: 0,
-    conteudo: '',
-    autoria: '',
-    modelo: ''
-  }
-   // Importado Pensamento Service, agora já posso consumir ele
+  // FormGrupo, ele serve para construção de formulários, que o angular nos fornece
+  formulario!: FormGroup;
+
   constructor(
-    private service: PensamentoService,
-    private router: Router,
-    private route: ActivatedRoute
+
+  private service: PensamentoService,
+
+  private router: Router,
+
+  private route: ActivatedRoute,
+
+  // FormBuilder, ele é outra class de serviço, responsável pela construção do formulário
+  private formBuilder: FormBuilder
     ) { }
 
+  // NgOnInit, Para que serve: Ele é chamado uma única vez após a inicialização do componente.
   ngOnInit(): void {
-    //snapshot, faz uma captura instantanea como se fosse uma fotografia na rota daquele momento que foi acessado
-    //paramMap, esta propriedade paramMap, ela nos tras como se fosse um mapa as informações obrigatorios e opcionais daquele pensamento
     const id = this.route.snapshot.paramMap.get('id')
     this.service.buscarPorId(parseInt(id!)).subscribe((pensamento) => {
-      this.pensamento = pensamento
+      this.formulario = this.formBuilder.group({
+        id: [pensamento.id],
+
+
+      // Validators.required, preenchimento obrigatorio
+      conteudo:[pensamento.conteudo, Validators.compose([
+        Validators.required,
+        // Expressão regular que não permiti que coloque apenas espaços vazios,
+        Validators.pattern(/(.|\s)*\S(.|\s)*/)
+      ])],
+
+
+
+      autoria: [pensamento.autoria, Validators.compose([
+        Validators.required,
+        // Quantidade minima de caracteres
+        Validators.minLength(3)
+      ])],
+      modelo: [pensamento.modelo]
     })
-  }
-  // Botão, editarPensamento, quando for clicado será direcionado para listar pensamento
-   editarPensamento() {
-    this.service.editar(this.pensamento).subscribe(() => {
+  })
+}
+  // Quando eu criar um novo pensamento será cadastradas as informações os valores constantes no formulário
+  editarPensamento() {
+   // console.log(this.formulario.get('autoria')?.errors)
+    // Si o formulario for valido, eu quero que o formulario seja criado
+    this.service.editar(this.formulario.value).subscribe(() => {
       this.router.navigate(['/listarPensamento'])
     })
-
   }
-  // Botão, Cancelar, quando clicar será direcionado, para listarPensamento
+
   cancelar() {
     this.router.navigate(['/listarPensamento'])
   }
 
-
+  // Quando o botão não estiver preenchido o botão, salvar está desabilitado e cinza, se eu digitar angular coisa no pensamento e mais de 2 caracteres na Autoria o botão é habilitado e muda a cor para azul
+  habilitarBotao(): string {
+    if(this.formulario.valid){
+      return 'botao'
+    }
+    else return "botao__desabilitado"
+  }
 }
