@@ -52,4 +52,12 @@ export class CriarPensamentoComponent implements OnInit {
   cancelar() {
     this.router.navigate(['/listarPensamento'])
   }
+  // Quando o botão não estiver preenchido o botão, salvar está desabilitado e cinza, se eu digitar angular coisa no pensamento e mais de 2 caracteres na Autoria o botão é habilitado e muda a cor para azul
+  habilitarBotao(): string {
+    if(this.formulario.valid){
+      return 'botao'
+    } else {
+      return 'botao__desabilitado'
+    }
+  }
 }

@@ -117,8 +117,17 @@
     </div>
     <div class="acoes">
       <!-- Nos botton, foi utilzado o Event Binding e quando ele tem () -->
-      <button (click)="criarPensamento()" class="botao">Salvar</button>
-      <button (click)="cancelar()" class="botao">Cancelar</button>
+      <!-- [disable]="!formulario.valid", se o formulario não estiver valido, o botão será desabilitado -->
+      <!-- [ngClass]="habilitarBotao()", renderizar o estilo condicional  -->
+      <button
+        [disabled]="!formulario.valid"
+        (click)="criarPensamento()"
+        [ngClass]="habilitarBotao()"
+        >Salvar
+      </button>
+      <button
+      (click)="cancelar()" class="botao">Cancelar
+    </button>
     </div>
   <!-- Formulario, Fim--------------------------------------------------------------------------------- -->
   </form>
