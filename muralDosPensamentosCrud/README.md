@@ -767,12 +767,28 @@ criar-pensamento.component.html
 </div>
 ```
 
-## Resumo
+resumo:
+
+Implementamos validações nos campos do formulário através da classe Validators;
+Identificar os tipos de erros que ocorreram nas validações;
+Exibir mensagens de erro customizadas;
+Mostrar mensagens de erro apenas quando o campo for acessado;
+Habilitar/desabilitar o botão de salvar de acordo com o status do formulário.
+
+## Resumo Geral
 
 ngIf — para mostrar a mensagem de que ainda não existem pensamentos cadastrados;
 ngFor — para renderizar uma sequência de pensamentos;
 ngClass — para aplicar estilização condicional.
-Aprendeu também sobre os services e como utilizar as injeções de dependências. Além disso, é capaz de realizar a comunicação com o servidor através do httpClient dos métodos get, post, put e delete, completando o "CRUD".
+Aprendemos também sobre os services e como utilizar as injeções de dependências. Além disso, é capaz de realizar a comunicação com o servidor através do httpClient dos métodos get, post, put e delete, completando o "CRUD".
+Implementamos validações nos campos do formulário através da classe Validators;
+Identificar os tipos de erros que ocorreram nas validações;
+Exibir mensagens de erro customizadas;
+Mostrar mensagens de erro apenas quando o campo for acessado;
+Habilitar/desabilitar o botão de salvar de acordo com o status do formulário.
+
+1 - Formularios reativos com a class validators
+2 - Vimos também como acessar os erros dos campos do formulário, atraves da propriedade erros e assim mostrar mensagem de erros costomizadas para pessoa usuaria através da diretiva ngIf e também mostrar o mesmo comportamento para o componente editar.
 
 ## Autor, Gilberto Gonçalves de Lima
 
