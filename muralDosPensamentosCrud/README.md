@@ -719,6 +719,54 @@ Validators.composeAsync()
 Compõe vários validadores assíncronos em uma única função que retorna a união dos objetos de erro individuais para o controle fornecido.
 Na documentação do [Documentação Validators Angular](https://angular.io/api/forms/Validators#description) Angular, você pode encontrar mais detalhes sobre a classe Validators.
 
+ ## validação customizada, recebendo apenas letras maiusculas no campo Autoria
+
+   Esta função não está disponível nas validações prontas da classe Validators. Então tempos que criar uma validação customizada e passá-la para o array de validações do campo.
+
+   Na pasta criar-pensamento, foi criado um arquivo com o nome minusculoValidators.ts. Esse arquivo vai conter a importação da classe AbstractControl e também a lógica para que seja permitido apenas a entrada de caracteres minúsculos no campo autoria.
+  
+  minusculoValidators.ts
+
+  ```js
+  import { AbstractControl } from "@angular/forms";
+
+    export function minusculoValidator(control: AbstractControl) {
+    const autoria = control.value as string;
+    if(autoria !== autoria?.toLowerCase()) {
+        return { minusculo: true };
+    } else
+    return null;
+}
+```
+Depois disso, importe a validação no componente e inclua no array junto com as outras validações.
+
+criar-pensamento.component.ts
+
+```js
+import { minusculoValidator } from './minusculoValidators';
+
+//código omitido
+
+autoria: ['', Validators.compose([
+        Validators.required,
+        Validators.minLength(3),
+        minusculoValidator
+])],
+
+//código omitido
+```
+
+E no html, inclua uma div para acessar o campo e mostrar a mensagem de erro, se necessário.
+
+criar-pensamento.component.html
+
+  ```js
+<div class="mensagem__erro"
+      *ngIf="formulario.get('autoria')?.errors?.['minusculo'] && formulario.get('autoria')?.touched">
+        Esse campo aceita apenas letras minúsculas
+</div>
+```
+
 ## Resumo
 
 ngIf — para mostrar a mensagem de que ainda não existem pensamentos cadastrados;
