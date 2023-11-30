@@ -18,7 +18,7 @@ export class PensamentoService {
   private readonly API = "http://localhost:3000/pensamento"
 
   //Observable irá, ficar observando
-  listar(pagina: number): Observable<Pensamento[]> {
+  listar(pagina: number, filtro: string): Observable<Pensamento[]> {
 
   const intensPorPagina = 6;
   // HttpParams, ele representa o corpo da requisição com a resposta http, incluindo os paramentros a serem realizados
@@ -26,6 +26,12 @@ export class PensamentoService {
   let params = new HttpParams()
     .set("_page", pagina)
     .set("_limit", intensPorPagina)
+
+  //  trim, ira remover os espaços vazios desta string
+  // Pesquisa
+  if(filtro.trim().length > 2) {
+    params = params.set("q", filtro)
+  }
 
   //Trazendo a lista de pensamentos que está na API
   //Outro jeito,  return this.http.get<Pensamento[]>(`${this.API}?_page=${pagina}&_limit=${intensPorPagina}`)

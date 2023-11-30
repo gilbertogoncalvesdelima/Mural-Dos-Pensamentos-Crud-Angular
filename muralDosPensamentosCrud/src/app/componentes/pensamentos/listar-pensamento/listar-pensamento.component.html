@@ -7,7 +7,10 @@
         placeholder="O que você procura?"
         autofocus
         [(ngModel)]="filtro"
+        (keyup)="pesquisarPensamentos()"
         >
+        <!-- (keyup), ele é disparado sempre que uma tecla retorna a posição original do teclado, sempre que você solta a tecla-->
+
         <img src="../../../../assets/imagens/lupa.png" alt="Lupa azul">
         <!-- Autofocus, receba o campo automático, assim que aplicação for carregada -->
       </div>

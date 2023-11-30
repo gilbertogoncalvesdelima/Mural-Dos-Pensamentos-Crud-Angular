@@ -331,6 +331,9 @@ O terminal passará a carregar os recursos. A mensagem "Hi!" aparecerá e també
 Resources
 [Localhost](http://localhost:3000/pensamentos)
 
+Resources
+[Documentação, json-server](http://github.com/typicode/json-server)
+
 ## Interface, tipando o que é um string e um number
 
 Para evitar que ocorram erros na base de dados e garantir a sua integridade, devemos criar um modelo de retorno da API. No Angular, chamamos este modelo de "interface", ou "tipagem estrutural".
