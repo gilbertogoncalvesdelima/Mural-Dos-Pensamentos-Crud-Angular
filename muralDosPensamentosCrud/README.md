@@ -820,6 +820,10 @@ Identificar os tipos de erros que ocorreram nas validações;
 Exibir mensagens de erro customizadas;
 Mostrar mensagens de erro apenas quando o campo for acessado;
 Habilitar/desabilitar o botão de salvar de acordo com o status do formulário.
+Utilizar o HttpParams para enviar parâmetros na url;
+Implementar paginação dos dados;
+Criar um componente botão para carregar os pensamentos sob demanda;
+Realizar a comunicação entre componentes.
 
 1 - Formularios reativos com a class validators
 2 - Vimos também como acessar os erros dos campos do formulário, atraves da propriedade erros e assim mostrar mensagem de erros costomizadas para pessoa usuaria através da diretiva ngIf e também mostrar o mesmo comportamento para o componente editar.
