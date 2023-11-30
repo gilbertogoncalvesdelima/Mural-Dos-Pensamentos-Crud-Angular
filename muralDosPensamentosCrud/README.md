@@ -830,6 +830,9 @@ Realizar a comunicação entre componentes.
 
 1 - Formularios reativos com a class validators
 2 - Vimos também como acessar os erros dos campos do formulário, atraves da propriedade erros e assim mostrar mensagem de erros costomizadas para pessoa usuaria através da diretiva ngIf e também mostrar o mesmo comportamento para o componente editar.
+Renderizar condicionalmente o ícone de favorito;
+Utilizar chamadas de métodos dentro da interpolação;
+Implementar a funcionalidade de ‘favoritar’ um pensamento.
 
 ## Autor, Gilberto Gonçalves de Lima
 
