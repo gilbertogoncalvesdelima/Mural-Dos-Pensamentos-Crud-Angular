@@ -13,6 +13,7 @@ export class ListarPensamentoComponent implements OnInit {
  //Criado um atributo chamado listaPensamentos
   listaPensamentos: Pensamento[]  = []
   paginaAtual: number = 1;
+  haMaisPensamentos: boolean = true;
 
   // Agora temos acesso a todos os metodos deste service
   constructor(private service: PensamentoService) { }
@@ -23,5 +24,17 @@ export class ListarPensamentoComponent implements OnInit {
     this.service.listar(this.paginaAtual).subscribe((listaPensamentos) => {
     this.listaPensamentos = listaPensamentos
     })
+  }
+  carrregarMaisPensamentos() {
+    // ++ serve para passar para a proxima pagina
+    this.service.listar(++this.paginaAtual)
+    .subscribe(listarPensamento => {
+      // ... foi utilizado o spread operator, pois eu quero que esta lista seja acrecida, os pensamentos que ja existe e mais os 6 que foram renderizados a cada página
+      this.listaPensamentos.push(...listarPensamento)
+      // Se não houverem mais pensamentos, que a propriedade haMaisPensamentos, recebe o valor de false
+      if(this.listaPensamentos.length) {
+        this.haMaisPensamentos = false
+      }
+    } )
   }
 }
