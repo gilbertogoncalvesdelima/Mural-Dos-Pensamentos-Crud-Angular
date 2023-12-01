@@ -121,11 +121,15 @@
       </div>
     </div>
     <div class="acoes">
+      <!--  ()="" = Isso e o Envent - Binding -->
+      <!-- {{ }}, Interpolação -->
+      <!--[], property Binding  -->
       <!-- Nos botton, foi utilzado o Event Binding e quando ele tem () -->
       <!-- [disable]="!formulario.valid", se o formulario não estiver valido, o botão será desabilitado -->
       <!-- [ngClass]="habilitarBotao()", renderizar o estilo condicional  -->
       <button
         [disabled]="!formulario.valid"
+
         (click)="criarPensamento()"
         [ngClass]="habilitarBotao()"
         >Salvar

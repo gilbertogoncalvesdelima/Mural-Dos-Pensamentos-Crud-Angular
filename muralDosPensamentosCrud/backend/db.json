@@ -1,18 +1,18 @@
 {
   "pensamento": [
     {
-      "conteudo": "Pensamento Azul",
-      "autoria": "descrição pensamento azul",
-      "modelo": "modelo1",
-      "favorito": true,
-      "id": 1
-    },
-    {
       "conteudo": "Pensamento Verde Escuro",
       "autoria": "descrição pensamento azul escuro",
       "modelo": "modelo2",
-      "favorito": false,
+      "favorito": true,
       "id": 2
+    },
+    {
+      "conteudo": "Pensamento Azul Escuro",
+      "autoria": "descrição azul escuro",
+      "modelo": "modelo1",
+      "favorito": false,
+      "id": 3
     }
   ]
 }
