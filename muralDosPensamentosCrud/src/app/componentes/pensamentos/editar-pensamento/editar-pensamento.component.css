@@ -5,7 +5,7 @@
 
 .botao {
   margin: 5px;
-  margin-top: 70px;
+  margin: 7px;
   width: 200px;
 }
 
@@ -143,6 +143,6 @@ input[type='radio']:checked+.custom-radio span {
 
 .botao__desabilitado {
   margin: 5px;
-  margin-top: 70px;
+  margin-top: 7px;
   width: 200px;
 }

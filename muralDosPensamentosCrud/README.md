@@ -814,6 +814,13 @@ Habilitar/desabilitar o botão de salvar de acordo com o status do formulário.
 
 ## Resumo Geral
 
+Foi utilizado no projeto:
+Formulários reativos
+validações nos campos
+Implementamos campo de busca
+Paginação dos dados
+Funcionalidade de favoritar
+
 ngIf — para mostrar a mensagem de que ainda não existem pensamentos cadastrados;
 ngFor — para renderizar uma sequência de pensamentos;
 ngClass — para aplicar estilização condicional.
