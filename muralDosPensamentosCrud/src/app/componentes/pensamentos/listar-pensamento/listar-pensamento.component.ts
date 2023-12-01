@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento';
 import { PensamentoService } from '../pensamento.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-pensamento',
@@ -19,7 +20,11 @@ export class ListarPensamentoComponent implements OnInit {
   listaFavoritos: Pensamento[] = []
 
   // Agora temos acesso a todos os metodos deste service
-  constructor(private service: PensamentoService) { }
+  constructor(private service: PensamentoService,
+
+  //Router é um servico, que fornece manipulação de recursos de url e tatmbém navegação entre view's
+  private router: Router
+    ) { }
 
 // Assim que mneu componente renderizar a primeira vez, atualize o service.listar
   ngOnInit(): void {
@@ -51,6 +56,24 @@ export class ListarPensamentoComponent implements OnInit {
      .subscribe(listaPensamentos => {
       this.listaPensamentos = listaPensamentos
      })
+  }
+
+  recarregarComponente() {
+
+    this.favoritos = false;
+    this.paginaAtual = 1;
+
+    // Estrategia quando estiver utilizando rotas
+    // Eu deveria utizar esta rota, quando utilizamos sholdReuseRoute
+    this.router.routeReuseStrategy.shouldReuseRoute = () => false
+
+    // location.reload() atualizar toda a página
+    // onSameUrlNavigation, esta propriedade diz que quando tiver navegando na mesma url, precisamos dizer para o angular o que quer, que aconteça
+    //ignore, o servidor ira ignorar a solicitação
+    // reload, recarregamento da url
+    this.router.onSameUrlNavigation = 'reload'
+    this.router.navigate([this.router.url])
+
   }
 
   listarFavoritos() {
