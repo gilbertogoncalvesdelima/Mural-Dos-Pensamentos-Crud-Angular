@@ -16,6 +16,13 @@
       </div>
       <h2 class="ff-mural">Meu Mural</h2>
       <!-- Router link, fazer direcionamento para uma rota especifica -->
+
+      <div class="botoes">
+        <button class="botao">Meu Mural</button>
+        <button class="botao" (click)="listarFavoritos()">Meus favoritos</button>
+        <button routerLink="/criarPensamento" class="botao">Novo pensamento</button>
+      </div>
+
       <button routerLink="/criarPensamento" class="botao">Adicionar pensamento</button>
   </header>
 
@@ -24,7 +31,10 @@
     <div *ngFor="let pensamento of listaPensamentos">
       <!--property binding, [pensamento], que declaramos no @input, no arquivo pensamento.component.ts, -->
       <!-- "´pensamento", é a variavel local que foi criado, pensamento -->
-      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+      <app-pensamento
+      [pensamento]="pensamento"
+      [listaFavoritos]="listaFavoritos"
+      ></app-pensamento>
     </div>
   </div>
 </section>

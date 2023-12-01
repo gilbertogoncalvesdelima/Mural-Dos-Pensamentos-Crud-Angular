@@ -19,6 +19,10 @@ export class PensamentoComponent implements OnInit {
     modelo: 'modelo3',
     favorito: false
   }
+
+  @Input() listaFavoritos: Pensamento[] = [];
+
+
   // Importamos o service, para conseguimos utilizar os metodos
   constructor(private service: PensamentoService) { }
 
@@ -39,8 +43,8 @@ export class PensamentoComponent implements OnInit {
     return 'ativo'
   }
   atualizarFavoritos() {
-    this.service.mudarFavorito(this.pensamento).subscribe
-    console.log(this.pensamento.favorito)
+    this.service.mudarFavorito(this.pensamento).subscribe(() => {
+      this.listaFavoritos.splice(this.listaFavoritos.indexOf(this.pensamento), 1)
+    })
   }
-
 }
