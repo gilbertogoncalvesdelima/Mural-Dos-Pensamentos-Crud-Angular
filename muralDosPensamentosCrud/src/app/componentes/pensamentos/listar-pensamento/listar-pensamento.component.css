@@ -1,125 +1,135 @@
+/* Define o estilo para os botões */
 .botoes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  display: flex; /* Estabelece um contêiner flexível */
+  flex-direction: row; /* Alinha os itens em linha */
+  justify-content: center; /* Centraliza os itens ao longo do eixo principal */
 }
 .botoes button {
-  margin-left: 10px;
-  margin-right: 2px;
+  margin-left: 10px; /* Adiciona margem à esquerda */
+  margin-right: 2px; /* Adiciona margem à direita */
 }
 
+/* Define o estilo para o mural */
 .mural {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin: 1rem 0 2rem;
+  display: flex; /* Estabelece um contêiner flexível */
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha quando não há espaço suficiente */
+  gap: 2rem; /* Adiciona espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens ao longo do eixo principal */
+  margin: 1rem 0 2rem; /* Adiciona margem superior, zera as margens laterais e adiciona margem inferior */
 }
 
-.d-flex{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+/* Define o estilo para um contêiner com flex direction column (d-flex) */
+.d-flex {
+  display: flex; /* Estabelece um contêiner flexível */
+  flex-direction: column; /* Alinha os itens em coluna */
+  gap: 2rem; /* Adiciona espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens ao longo do eixo principal */
 }
 
+/* Define o estilo para um elemento sem pensamentos */
 .sem-pensamentos {
-  text-align: center;
-  padding: 2rem 0 5rem;
+  text-align: center; /* Centraliza o texto */
+  padding: 2rem 0 5rem; /* Adiciona preenchimento superior, zera os preenchimentos laterais e adiciona preenchimento inferior */
 }
 
-.d-flex{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+/* Redefine o estilo para o contêiner com flex direction column (d-flex) */
+.d-flex {
+  display: flex; /* Estabelece um contêiner flexível */
+  flex-direction: column; /* Alinha os itens em coluna */
+  gap: 2rem; /* Adiciona espaçamento entre os itens */
+  justify-content: center; /* Centraliza os itens ao longo do eixo principal */
 }
 
+/* Define o estilo para a caixa de busca (buscar-pensamentos) */
 .buscar-pensamentos {
-  background: #F8F9FE;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  height: 44px;
-  left: 421px;
-  top: 490px;
-  width: 510px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  align-self: center;
+  background: #F8F9FE; /* Define a cor de fundo */
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  height: 44px; /* Define a altura */
+  left: 421px; /* Define a posição à esquerda */
+  top: 490px; /* Define a posição superior */
+  width: 510px; /* Define a largura */
+  display: flex; /* Estabelece um contêiner flexível */
+  align-items: center; /* Centraliza os itens ao longo do eixo transversal */
+  text-align: center; /* Centraliza o texto */
+  align-self: center; /* Alinha consigo mesmo no centro */
 }
 
+/* Define o estilo para a imagem dentro da caixa de busca */
 .buscar-pensamentos img {
-  padding-right: 15px;
+  padding-right: 15px; /* Adiciona preenchimento à direita */
 }
 
+/* Define o estilo para o placeholder do input */
 input::placeholder {
-  color: #C4C4C4;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 29px;
+  color: #C4C4C4; /* Define a cor do texto de espaço reservado */
+  font-family: 'Inter'; /* Define a fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 400; /* Define o peso da fonte */
+  font-size: 18px; /* Define o tamanho da fonte */
+  line-height: 29px; /* Define a altura da linha */
 }
 
+/* Remove o botão de cancelar no input de busca para navegadores Webkit */
 input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
+  -webkit-appearance: none; /* Remove a aparência padrão do botão de cancelar no Webkit */
 }
 
+/* Define o estilo para o filtro */
 .filtro {
-  width: 100%;
-  height: 100%;
-  left: 437px;
-  top: 537px;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 29px;
-  border: none;
-  outline: 0;
-  text-decoration: none;
-  padding-left: 15px;
-  border-radius: 10px;
+  width: 100%; /* Define a largura como 100% */
+  height: 100%; /* Define a altura como 100% */
+  left: 437px; /* Define a posição à esquerda */
+  top: 537px; /* Define a posição superior */
+  font-family: 'Inter'; /* Define a fonte */
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-weight: 400; /* Define o peso da fonte */
+  font-size: 20px; /* Define o tamanho da fonte */
+  line-height: 29px; /* Define a altura da linha */
+  border: none; /* Remove a borda */
+  outline: 0; /* Remove a aparência do contorno ao focar */
+  text-decoration: none; /* Remove a decoração de texto */
+  padding-left: 15px; /* Adiciona preenchimento à esquerda */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
 }
 
+/* Define regras de mídia para design responsivo */
 @media screen and (min-width: 216px) {
   .buscar-pensamentos {
-    width: 250px;
+    width: 250px; /* Define a largura para telas com largura mínima de 216 pixels */
   }
 }
 
 @media screen and (min-width: 396px) {
   .buscar-pensamentos {
-    width: 380px;
+    width: 380px; /* Define a largura para telas com largura mínima de 396 pixels */
   }
 }
 
 @media screen and (min-width: 576px) {
   .buscar-pensamentos {
-    width: 510px;
+    width: 510px; /* Define a largura para telas com largura mínima de 576 pixels */
   }
 }
 
-
-
-
-/* Defina as cores que você quer usar em uma lista */
+/* Define as cores a serem usadas em uma lista com animação */
 .ff-inter {
-  color: #ff0000; /* Cor inicial, você pode ajustar */
-  animation: changeColor 2s infinite;
+  color: #ff0000; /* Define a cor inicial, ajustável */
+  animation: changeColor 2s infinite; /* Aplica a animação de mudança de cor */
 }
 
+/* Define a animação de mudança de cor usando keyframes */
 @keyframes changeColor {
   0%, 100% {
-    color: #ff0000; /* Cor inicial */
+    color: #ff0000; /* Define a cor inicial */
   }
   25% {
-    color: #00ff00; /* Cor após 0.5 segundos (25% de 2s) */
+    color: #00ff00; /* Define a cor após 0.5 segundos (25% de 2s) */
   }
   50% {
-    color: #0000ff; /* Cor após 1 segundo (50% de 2s) */
+    color: #0000ff; /* Define a cor após 1 segundo (50% de 2s) */
   }
   75% {
-    color: #ffff00; /* Cor após 1.5 segundos (75% de 2s) */
+    color: #ffff00; /* Define a cor após 1.5 segundos (75% de 2s) */
   }
 }

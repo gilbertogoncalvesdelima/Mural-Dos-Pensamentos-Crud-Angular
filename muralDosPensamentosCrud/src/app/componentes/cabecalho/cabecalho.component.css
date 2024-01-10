@@ -1,45 +1,50 @@
+/* Estilos para o cabeçalho */
 .cabecalho {
-  background: url(/assets/imagens/fundo-cabecalho.png);
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  background: url(/assets/imagens/fundo-cabecalho.png); /* Define a imagem de fundo */
+  background-size: cover; /* Faz com que a imagem de fundo cubra todo o cabeçalho */
+  display: flex; /* Usa o modelo flexbox para organizar os elementos internos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
 }
 
+/* Estilos para o logotipo no cabeçalho */
 .cabecalho .logo {
-  width: 46%;
-  padding: 2rem 3rem;
+  width: 46%; /* Define a largura do logotipo */
+  padding: 2rem 3rem; /* Adiciona preenchimento ao redor do logotipo */
 }
 
 .cabecalho .logo img {
-  width: 90%;
-  max-width: 350px;
-  margin-bottom: 2rem;
+  width: 90%; /* Define a largura da imagem do logotipo */
+  max-width: 350px; /* Limita a largura máxima da imagem do logotipo */
+  margin-bottom: 2rem; /* Adiciona margem inferior à imagem do logotipo */
 }
 
-.cabecalho .imagem{
-  width: 40%;
+/* Estilos para outra imagem no cabeçalho */
+.cabecalho .imagem {
+  width: 40%; /* Define a largura da outra imagem */
 }
 
 .cabecalho p {
-  font-size: 2rem;
-  color: #6BD1FF;
+  font-size: 2rem; /* Define o tamanho da fonte para parágrafos */
+  color: #6BD1FF; /* Define a cor do texto para azul claro */
 }
 
+/* Media query para telas com largura máxima de 576 pixels */
 @media (max-width: 576px) {
   .cabecalho .logo {
-    padding: 2rem;
+    padding: 2rem; /* Reduz o preenchimento do logotipo para telas menores */
   }
   .cabecalho p {
-    font-size: 1.5rem
+    font-size: 1.5rem; /* Reduz o tamanho da fonte para telas menores */
   }
 }
 
+/* Media query para telas com largura máxima de 768 pixels */
 @media (max-width: 768px) {
   .cabecalho .logo {
-    width: 90%;
+    width: 90%; /* Reduz a largura do logotipo para telas menores */
   }
   .cabecalho .imagem {
-    display: none;
+    display: none; /* Oculta a outra imagem para telas menores que 768 pixels */
   }
 }

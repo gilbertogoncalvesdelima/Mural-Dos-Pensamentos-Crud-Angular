@@ -1,149 +1,168 @@
+/* Container for actions with centered content */
 .acoes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  display: flex; /* Usa flexbox para layout */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  align-content: center; /* Alinha o conteúdo ao centro */
 }
 
+/* Button styling */
 .botao {
-  margin: 5px;
-  margin-top: 70px;
-  width: 200px;
+  margin: 5px; /* Espaçamento externo */
+  margin-top: 70px; /* Espaçamento superior */
+  width: 200px; /* Largura */
 }
 
+/* Styles for creating thoughts section */
 .criar-pensamentos {
-  padding: 2rem 0;
+  padding: 2rem 0; /* Preenchimento interno */
 }
 
+/* Form styling within the creating thoughts section */
 .criar-pensamentos form {
-  background: #C4EDFF;
-
-  border: none;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 2rem;
+  background: #C4EDFF; /* Cor de fundo */
+  border: none; /* Sem borda */
+  border-radius: 20px; /* Borda arredondada */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Coluna de layout para os filhos */
+  padding: 2rem; /* Preenchimento interno */
 }
 
+/* Label styling within the form */
 .criar-pensamentos form label {
-  color: #154580;
-  font-weight: bold;
-  margin: 0 0 1rem;
+  color: #154580; /* Cor do texto */
+  font-weight: bold; /* Negrito */
+  margin: 0 0 1rem; /* Margens */
 }
 
+/* Input styling within the form */
 .criar-pensamentos form .input {
-  border: none;
-  height: 40px;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  border: none; /* Sem borda */
+  height: 40px; /* Altura */
+  padding: 1rem 2rem; /* Preenchimento interno */
+  border-radius: 20px; /* Borda arredondada */
+  margin: 0.5rem 0 2rem; /* Margens */
 }
 
-
+/* Textarea styling within the form */
 .criar-pensamentos form .textarea {
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  border: none; /* Sem borda */
+  padding: 1rem 2rem; /* Preenchimento interno */
+  border-radius: 20px; /* Borda arredondada */
+  margin: 0.5rem 0 2rem; /* Margens */
 }
 
+/* Container for radio buttons */
 .container-radio {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  display: flex; /* Usa flexbox para layout */
+  gap: 2.5rem; /* Espaçamento entre os filhos */
+  flex-wrap: wrap; /* Quebra de linha automática */
 }
 
+/* Container for models */
 .modelos {
-  display: flex;
-  gap: 2.5rem;
-  border: 1px solid red;
+  display: flex; /* Usa flexbox para layout */
+  gap: 2.5rem; /* Espaçamento entre os filhos */
+  border: 1px solid red; /* Borda sólida vermelha */
 }
 
+/* Styling for individual model containers */
 .modelo {
-  background-color: #F8F9FE;
-  padding: 1rem;
-  max-width: 250px;
-  margin: 1rem 0 2rem;
+  background-color: #F8F9FE; /* Cor de fundo */
+  padding: 1rem; /* Preenchimento interno */
+  max-width: 250px; /* Largura máxima */
+  margin: 1rem 0 2rem; /* Margens */
 }
 
+/* Content within the model container */
 .modelo .conteudo {
-  margin: 1rem auto;
-  word-wrap: break-word;
+  margin: 1rem auto; /* Margens automáticas */
+  word-wrap: break-word; /* Quebra de palavra */
 }
 
+/* Authorship information within the model container */
 .modelo .autoria {
-  word-wrap: break-word;
+  word-wrap: break-word; /* Quebra de palavra */
 }
 
+/* Styling for radio buttons */
 .radio {
-  margin: 0;
+  margin: 0; /* Sem margem */
 }
 
+/* Box shadows for different models */
 .modelo1 {
-  box-shadow: 8px 8px 0px #154580;
+  box-shadow: 8px 8px 0px #154580; /* Sombra com deslocamento */
 }
 
 .modelo2 {
-  box-shadow: 8px 8px 0px #6BD1FF;
+  box-shadow: 8px 8px 0px #6BD1FF; /* Sombra com deslocamento */
 }
 
 .modelo3 {
-  box-shadow: 8px 8px 0px #84EEC1;
+  box-shadow: 8px 8px 0px #84EEC1; /* Sombra com deslocamento */
 }
 
+/* Hide default radio button */
 input[type='radio'] {
-  display: none;
+  display: none; /* Esconde o botão padrão */
 }
 
+/* Styling for radio button labels */
 .radio-modelo label {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
+  display: flex; /* Usa flexbox para layout */
+  align-items: center; /* Alinha os itens verticalmente */
+  column-gap: 20px; /* Espaçamento entre colunas */
 }
 
+/* Custom-styled radio buttons */
 .custom-radio {
-  border: 1px solid #154580;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
+  border: 1px solid #154580; /* Borda sólida */
+  width: 30px; /* Largura */
+  height: 30px; /* Altura */
+  display: grid; /* Usa grid para layout */
+  place-content: center; /* Centraliza o conteúdo */
+  border-radius: 50%; /* Borda arredondada */
 }
 
+/* Transition and color styles for custom radio buttons */
 .custom-radio,
 span {
-  transition: 0.5s ease;
-  color: #154580;
+  transition: 0.5s ease; /* Efeito de transição */
+  color: #154580; /* Cor do texto */
 }
 
+/* Styling for the inner circle of the custom radio button */
 .custom-radio span {
-  content: '';
-  width: 18px;
-  height: 18px;
-  background: transparent;
-  border-radius: 50%;
+  content: ''; /* Conteúdo vazio */
+  width: 18px; /* Largura */
+  height: 18px; /* Altura */
+  background: transparent; /* Fundo transparente */
+  border-radius: 50%; /* Borda arredondada */
 }
 
+/* Styling for checked state of custom radio button */
 input[type='radio']:checked+.custom-radio {
-  border-color: #154580;
+  border-color: #154580; /* Borda com cor específica quando marcado */
 }
 
+/* Styling for checked state of the inner circle of custom radio button */
 input[type='radio']:checked+.custom-radio span {
-  background: #154580;
+  background: #154580; /* Fundo com cor específica quando marcado */
 }
 
+/* Styling for error messages */
 .mensagem__erro {
-  font-size: 12px;
-  margin-left: 5px;
-  color: red;
-  margin-top: -25px;
-  margin-bottom: 20px;
+  font-size: 12px; /* Tamanho da fonte */
+  margin-left: 5px; /* Margem à esquerda */
+  color: red; /* Cor do texto */
+  margin-top: -25px; /* Margem superior negativa */
+  margin-bottom: 20px; /* Margem inferior */
 }
 
+/* Disabled button styling */
 .botao__desabilitado {
-  margin: 5px;
-  margin-top: 70px;
-  width: 200px;
+  margin: 5px; /* Espaçamento externo */
+  margin-top: 70px; /* Espaçamento superior */
+  width: 200px; /* Largura */
 }

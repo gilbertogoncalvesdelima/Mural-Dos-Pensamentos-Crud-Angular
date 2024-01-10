@@ -1,148 +1,140 @@
+/* Estilização para o layout flexível e centralização dos botões */
 .acoes {
   display: flex;
   justify-content: center;
 }
 
+/* Estilo base para os botões */
 .botao {
-  margin: 5px;
-  margin: 7px;
-  width: 200px;
+  margin: 5px;      /* Margem de 5 pixels em todas as direções */
+  margin: 7px;      /* Duplicação da margem, pode ser um erro */
+  width: 200px;     /* Largura fixa de 200 pixels */
 }
 
+/* Estilização para a seção de edição de pensamentos */
 .editar-pensamentos {
-  padding: 2rem 0;
+  padding: 2rem 0;  /* Preenchimento de 2 rem na parte superior e inferior */
 }
 
+/* Estilização para o formulário de edição de pensamentos */
 .editar-pensamentos form {
-  background: #C4EDFF;
-
-  border: none;
-  border-radius: 20px;
-
-  display: flex;
-  flex-direction: column;
-
-  padding: 2rem;
+  background: #C4EDFF;     /* Cor de fundo azul claro */
+  border: none;            /* Sem borda */
+  border-radius: 20px;     /* Bordas arredondadas de 20 pixels */
+  display: flex;           /* Layout flexível */
+  flex-direction: column;  /* Itens dispostos em coluna */
+  padding: 2rem;           /* Preenchimento de 2 rem em todas as direções */
 }
 
+/* Estilização para as etiquetas do formulário de edição de pensamentos */
 .editar-pensamentos form label {
-  color: #154580;
-  font-weight: bold;
-  margin: 0 0 1rem;
+  color: #154580;      /* Cor do texto azul escuro */
+  font-weight: bold;   /* Texto em negrito */
+  margin: 0 0 1rem;    /* Margem inferior de 1 rem */
 }
 
+/* Estilização para campos de entrada de texto no formulário de edição */
 .editar-pensamentos form .input {
-  border: none;
-  height: 40px;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  border: none;         /* Sem borda */
+  height: 40px;         /* Altura de 40 pixels */
+  padding: 1rem 2rem;   /* Preenchimento de 1 rem nas extremidades e 2 rem no topo e na base */
+  border-radius: 20px;  /* Bordas arredondadas de 20 pixels */
+  margin: 0.5rem 0 2rem; /* Margem inferior de 2 rem */
 }
 
-
+/* Estilização para campos de texto (textarea) no formulário de edição */
 .editar-pensamentos form .textarea {
-  border: none;
-  padding: 1rem 2rem;
-  border-radius: 20px;
-  margin: 0.5rem 0 2rem;
+  border: none;         /* Sem borda */
+  padding: 1rem 2rem;   /* Preenchimento de 1 rem nas extremidades e 2 rem no topo e na base */
+  border-radius: 20px;  /* Bordas arredondadas de 20 pixels */
+  margin: 0.5rem 0 2rem; /* Margem inferior de 2 rem */
 }
 
+/* Estilização para o layout dos botões de seleção de modelo */
 .container-radio {
-  display: flex;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  display: flex;        /* Layout flexível */
+  gap: 2.5rem;          /* Espaçamento entre os itens de 2.5 rem */
+  flex-wrap: wrap;      /* Quebra de linha quando não há espaço suficiente */
 }
 
+/* Estilização para a seção de modelos de cartão */
 .modelos {
-  display: flex;
-  gap: 2.5rem;
-  border: 1px solid red;
+  display: flex;        /* Layout flexível */
+  gap: 2.5rem;          /* Espaçamento entre os itens de 2.5 rem */
+  border: 1px solid red; /* Borda vermelha (exemplo para depuração) */
 }
 
+/* Estilização para cada modelo de cartão */
 .modelo {
-  background-color: #F8F9FE;
-  padding: 1rem;
-  max-width: 250px;
-  margin: 1rem 0 2rem;
+  background-color: #F8F9FE; /* Cor de fundo azul muito claro */
+  padding: 1rem;             /* Preenchimento de 1 rem em todas as direções */
+  max-width: 250px;          /* Largura máxima de 250 pixels */
+  margin: 1rem 0 2rem;       /* Margem superior de 1 rem, sem margem inferior, margem inferior de 2 rem */
 }
 
+/* Estilização para o conteúdo dentro de um modelo */
 .modelo .conteudo {
-  margin: 1rem auto;
-  word-wrap: break-word;
+  margin: 1rem auto;    /* Margem superior e inferior de 1 rem, margem lateral automática */
+  word-wrap: break-word; /* Quebra de palavra em caso de necessidade */
 }
 
-
+/* Estilização para a autoria dentro de um modelo */
 .modelo .autoria {
-  word-wrap: break-word;
+  word-wrap: break-word; /* Quebra de palavra em caso de necessidade */
 }
 
+/* Estilização para os botões de rádio */
 .radio {
-  margin: 0;
+  margin: 0;  /* Sem margem */
 }
 
+/* Estilização específica para o Modelo 1 */
 .modelo1 {
-  box-shadow: 8px 8px 0px #154580;
+  box-shadow: 8px 8px 0px #154580; /* Sombra com deslocamento de 8px na horizontal e vertical, cor azul escuro */
 }
 
+/* Estilização específica para o Modelo 2 */
 .modelo2 {
-  box-shadow: 8px 8px 0px #6BD1FF;
+  box-shadow: 8px 8px 0px #6BD1FF; /* Sombra com deslocamento de 8px na horizontal e vertical, cor azul claro */
 }
 
+/* Estilização específica para o Modelo 3 */
 .modelo3 {
-  box-shadow: 8px 8px 0px #84EEC1;
+  box-shadow: 8px 8px 0px #84EEC1; /* Sombra com deslocamento de 8px na horizontal e vertical, cor verde claro */
 }
 
+/* Ocultar os botões de rádio */
 input[type='radio'] {
   display: none;
 }
 
+/* Estilização dos rótulos dos botões de rádio */
 .radio-modelo label {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
+  display: flex;           /* Layout flexível */
+  align-items: center;     /* Itens centralizados verticalmente */
+  column-gap: 20px;        /* Espaçamento entre colunas de 20px */
 }
 
+/* Estilização para botões de rádio personalizados */
 .custom-radio {
-  border: 1px solid #154580;
-  width: 30px;
-  height: 30px;
-  display: grid;
-  place-content: center;
-  border-radius: 50%;
+  border: 1px solid #154580; /* Borda sólida com cor azul escuro */
+  width: 30px;               /* Largura de 30 pixels */
+  height: 30px;              /* Altura de 30 pixels */
+  display: grid;             /* Layout de grade */
+  place-content: center;     /* Centraliza o conteúdo da grade */
+  border-radius: 50%;        /* Bordas arredondadas de 50% para formar um círculo */
 }
 
+/* Transições suaves para botões de rádio personalizados */
 .custom-radio,
 span {
-  transition: 0.5s ease;
-  color: #154580;
+  transition: 0.5s ease; /* Transição suave de 0.5 segundos */
+  color: #154580;        /* Cor do texto azul escuro */
 }
 
+/* Estilização do elemento visual do botão de rádio personalizado */
 .custom-radio span {
-  content: '';
-  width: 18px;
+  content: '';          /* Conteúdo vazio para o elemento visual do botão de rádio */
+  width: 18px;           /* Largura de 18 pixels */
   height: 18px;
-  background: transparent;
-  border-radius: 50%;
-}
-
-input[type='radio']:checked+.custom-radio {
-  border-color: #154580;
-}
-
-input[type='radio']:checked+.custom-radio span {
-  background: #154580;
-}
-
-.mensagem__erro {
-  font-size: 12px;
-  margin-left: 5px;
-  color: red;
-  margin-top: -25px;
-  margin-bottom: 20px;
-}
-
-.botao__desabilitado {
-  margin: 5px;
-  margin-top: 7px;
-  width: 200px;
 }

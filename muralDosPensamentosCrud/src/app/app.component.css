@@ -1,5 +1,6 @@
+/* Define o estilo para a seção principal */
 main {
-  background: url(/assets/imagens/background-completo.png);
-  background-size: cover;
-  min-height: 60vh;
+  background: url(/assets/imagens/background-completo.png); /* Define a imagem de fundo */
+  background-size: cover; /* Redimensiona a imagem para cobrir todo o elemento */
+  min-height: 60vh; /* Define a altura mínima como 60% da altura da viewport */
 }

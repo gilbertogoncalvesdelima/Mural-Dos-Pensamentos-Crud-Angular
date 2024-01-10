@@ -1,48 +1,55 @@
+/* Define o estilo para o rodapé */
 footer {
-  background-image: url(/assets/imagens/fundo-rodape.png);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "TextoCopyright LogoRodape .";
-  align-items: center;
-  padding: 1rem 2rem;
-}
-.Date{
-  justify-self: center;
-  color: white;
+  background-image: url(/assets/imagens/fundo-rodape.png); /* Define a imagem de fundo */
+  display: grid; /* Usa o modelo de layout grid */
+  grid-template-columns: 1fr 1fr 1fr; /* Divide o rodapé em três colunas iguais */
+  grid-template-rows: 1fr; /* Uma única linha de altura igual */
+  gap: 0px 0px; /* Espaçamento entre as células (linhas e colunas) */
+  grid-template-areas: "TextoCopyright LogoRodape ."; /* Define as áreas do grid */
+  align-items: center; /* Alinha os itens no centro ao longo do eixo transversal */
+  padding: 1rem 2rem; /* Adiciona preenchimento */
 }
 
+/* Define o estilo para a data */
+.Date {
+  justify-self: center; /* Alinha o item no centro ao longo do eixo principal */
+  color: white; /* Define a cor do texto */
+}
+
+/* Define o estilo para o texto de copyright */
 .TextoCopyright {
-  justify-self: center;
-  grid-area: TextoCopyright;
+  justify-self: center; /* Alinha o item no centro ao longo do eixo principal */
+  grid-area: TextoCopyright; /* Atribui à área específica do grid */
 }
 
+/* Define o estilo para o logotipo no rodapé */
 .LogoRodape {
-  justify-self: center;
-  grid-area: LogoRodape;
-  border-radius: 10px;
+  justify-self: center; /* Alinha o item no centro ao longo do eixo principal */
+  grid-area: LogoRodape; /* Atribui à área específica do grid */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
 }
 
+/* Define o estilo para texto pequeno dentro do rodapé */
 footer small {
-  color: white;
+  color: white; /* Define a cor do texto */
 }
 
+/* Define regras de mídia para design responsivo até 576px de largura */
 @media (max-width: 576px) {
   .cabecalho .logo {
-    padding: 2rem;
+    padding: 2rem; /* Adiciona preenchimento ao logotipo no cabeçalho */
   }
 
   .cabecalho p {
-    font-size: 1.5rem
+    font-size: 1.5rem; /* Ajusta o tamanho da fonte para os parágrafos no cabeçalho */
   }
 }
 
+/* Define regras de mídia para design responsivo até 768px de largura */
 @media (max-width: 768px) {
   footer {
-    display: flex;
-    flex-direction: column-reverse;
-    gap: 1rem;
+    display: flex; /* Altera o modelo de layout para flexível */
+    flex-direction: column-reverse; /* Coloca a coluna reversa na ordem de empilhamento */
+    gap: 1rem; /* Adiciona espaçamento entre os itens empilhados */
   }
 }

@@ -1,67 +1,75 @@
+/* Estilização para uma janela modal */
 .modal {
-  background: #fff;
-  box-shadow: 7px 8px 0px 0px #154580;
-  min-width: 360px;
-  min-height: 150px;
-  position: fixed;
-  left: 50%;
-  padding: 24px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 11;
-  font-size: 1.5rem;
-  text-align: center;
-  padding-top: 50px;
+  background: #fff;                  /* Fundo branco */
+  box-shadow: 7px 8px 0px 0px #154580; /* Sombra com deslocamento de 7px na horizontal e 8px na vertical, cor azul escuro */
+  min-width: 360px;                  /* Largura mínima de 360 pixels */
+  min-height: 150px;                 /* Altura mínima de 150 pixels */
+  position: fixed;                   /* Posição fixa na tela */
+  left: 50%;                         /* Posicionamento no centro horizontalmente */
+  padding: 24px;                     /* Preenchimento interno de 24 pixels em todas as direções */
+  top: 50%;                          /* Posicionamento no centro verticalmente */
+  transform: translate(-50%, -50%);  /* Ajuste fino para centralizar a janela */
+  z-index: 11;                       /* Índice de sobreposição */
+  font-size: 1.5rem;                 /* Tamanho da fonte */
+  text-align: center;                /* Alinhamento de texto no centro */
+  padding-top: 50px;                 /* Preenchimento superior adicional de 50 pixels */
 }
 
+/* Estilização para a sobreposição (fundo escuro) da janela modal */
 .overlay {
-  background: #000;
-  height: 100vh;
-  left: 0;
-  opacity: 0.5;
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  z-index: 10;
+  background: #000;     /* Fundo preto */
+  height: 100vh;        /* Altura total da viewport */
+  left: 0;              /* Alinhamento à esquerda */
+  opacity: 0.5;         /* Opacidade de 50% */
+  position: fixed;      /* Posição fixa na tela */
+  top: 0;               /* Alinhamento ao topo */
+  width: 100vw;         /* Largura total da viewport */
+  z-index: 10;          /* Índice de sobreposição menor que o da modal */
 }
 
+/* Estilização para o layout flexível e centralização dos botões */
 .acoes {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
-  margin-top: 30px;
+  margin-top: 30px;      /* Margem superior de 30 pixels */
 }
 
+/* Estilo base para os botões */
 .botao {
-  margin: 5px;
-  margin-top: 70px;
-  width: 200px;
+  margin: 5px;           /* Margem de 5 pixels em todas as direções */
+  margin-top: 70px;      /* Margem superior de 70 pixels */
+  width: 200px;          /* Largura fixa de 200 pixels */
 }
 
+/* Estilo específico para o botão cancelar */
 .botao-cancelar {
-  border: none;
-  cursor: pointer;
-  margin-right: 10px;
-  margin-top: 10px;
+  border: none;          /* Sem borda */
+  cursor: pointer;       /* Cursor do tipo apontador (mão) */
+  margin-right: 10px;    /* Margem à direita de 10 pixels */
+  margin-top: 10px;      /* Margem superior de 10 pixels */
 }
 
+/* Estilo específico para o botão excluir */
 .botao-excluir {
-  border: none;
-  cursor: pointer;
-  margin-left: 5px;
-  margin-top: 10px;
+  border: none;          /* Sem borda */
+  cursor: pointer;       /* Cursor do tipo apontador (mão) */
+  margin-left: 5px;      /* Margem à esquerda de 5 pixels */
+  margin-top: 10px;      /* Margem superior de 10 pixels */
 }
 
+/* Estilização para a seção de exclusão de pensamentos */
 .excluir-pensamentos {
-  padding: 10rem 0;
+  padding: 10rem 0;      /* Preenchimento de 10 rem na parte superior e inferior */
 }
 
+/* Estilo responsivo para telas menores que 548px de largura */
 @media screen and (max-width: 548px) {
   .modal {
-    width: 90%;
-    min-width: 90%;
-    padding: 50px 12px 24px;
-    font-size: 1.2rem;
+    width: 90%;          /* Largura de 90% */
+    min-width: 90%;      /* Largura mínima de 90% */
+    padding: 50px 12px 24px; /* Preenchimento interno ajustado para telas menores */
+    font-size: 1.2rem;   /* Tamanho da fonte reduzido */
   }
 }
